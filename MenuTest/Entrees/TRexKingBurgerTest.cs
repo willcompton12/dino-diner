@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Xunit;
 using DinoDiner.Menu.Entrees;
-
+/*
 namespace MenuTest.Entrees
 {
     public class TRexKingBurgerUnitTest
@@ -110,3 +110,4 @@ namespace MenuTest.Entrees
     }
 
 }
+*/
