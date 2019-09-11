@@ -16,8 +16,8 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> ingredients = new List<string>() { "Steakburger pattie" };
-                if (bun) ingredients.Add("whole-weat bun");
+                List<string> ingredients = new List<string>() { "Steakburger Pattie" };
+                if (bun) ingredients.Add("Whole Wheat Bun");
                 if (pickle) ingredients.Add("Pickle");
                 if (ketchup) ingredients.Add("Ketchup");
                 if (mustard) ingredients.Add("Mustard");
