@@ -7,8 +7,10 @@ using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
-
-    public class Fryceritops : Side
+    /// <summary>
+    /// Adds Mezzorella sticks to the menu as a side
+    /// </summary>
+    public class MeteorMacAndCheese : Side
     {
         /// <summary>
         /// Variable to hold the size ordered
@@ -26,15 +28,15 @@ namespace DinoDiner.Menu.Sides
                 {
                     case Size.Small:
                         Price = 0.99;
-                        Calories = 222;
+                        Calories = 420;
                         break;
                     case Size.Medium:
                         Price = 1.45;
-                        Calories = 365;
+                        Calories = 490;
                         break;
                     case Size.Large:
                         Price = 1.95;
-                        Calories = 480;
+                        Calories = 520;
                         break;
                 }
 
@@ -46,13 +48,13 @@ namespace DinoDiner.Menu.Sides
         /// method to add the ingredients to the ingredients list 
         /// as well as default price and calories
         /// </summary>
-        public Fryceritops()
+        public MeteorMacAndCheese()
         {
             Price = 0.99;
-            Calories = 222;
-            Ingredients.Add("Potato");
-            Ingredients.Add("Salt");
-            Ingredients.Add("Vegetable Oil");
+            Calories = 420;
+            Ingredients.Add("Cheese Product");
+            Ingredients.Add("Macaroni Noodles");
+            Ingredients.Add("Pork Sausage");
         }
     }
     

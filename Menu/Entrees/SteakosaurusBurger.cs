@@ -2,17 +2,14 @@
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class SteakosaurusBurger
+    public class SteakosaurusBurger : Entree
     {
         private bool bun = true;
         private bool pickle = true;
         private bool ketchup = true;
         private bool mustard = true;
 
-        public double Price { get; set; }
-        public uint Calories { get; set; }
-
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -27,8 +24,8 @@ namespace DinoDiner.Menu.Entrees
 
         public SteakosaurusBurger()
         {
-            this.Price = 5.15;
-            this.Calories = 621;
+            Price = 5.15;
+            Calories = 621;
         }
 
         public void HoldBun()

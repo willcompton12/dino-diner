@@ -2,21 +2,17 @@
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class DinoNuggets
+    public class DinoNuggets : Entree
     {
         
       
         private int total = 6;
 
-        public double Price { get; set; }
-        public uint Calories { get; set; }
-
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
                  List<string> ingredients = new List<string>();
-                
                 
                     for (int i = 0; i < total; i++){
                         ingredients.Add("Chicken Nugget");
@@ -29,15 +25,15 @@ namespace DinoDiner.Menu.Entrees
 
         public DinoNuggets()
         {
-            this.Price = 4.25;
-            this.Calories = 354;
+            Price = 4.25;
+            Calories = 354;
         }
 
         public void AddNugget()
         {
             this.total += 1;
-            this.Calories += 59;
-            this.Price += .25;
+            Calories += 59;
+            Price += .25;
 
         }
        

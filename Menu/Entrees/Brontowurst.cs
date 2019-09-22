@@ -2,16 +2,17 @@
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class Brontowurst
+    /// <summary>
+    /// 
+    /// </summary>
+    public class Brontowurst : Entree
     {
         private bool bun = true;
         private bool peppers = true;
         private bool onions = true;
 
-        public double Price { get; set; }
-        public uint Calories { get; set; }
-
-        public List<string> Ingredients
+  
+        public override List<string> Ingredients
         {
             get
             {
@@ -25,8 +26,9 @@ namespace DinoDiner.Menu.Entrees
 
         public Brontowurst()
         {
-            this.Price = 5.36;
-            this.Calories = 498;
+
+            Price = 5.36;
+            Calories = 498;
         }
         /// <summary>
         /// 

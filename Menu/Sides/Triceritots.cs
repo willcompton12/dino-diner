@@ -1,13 +1,25 @@
-﻿using System;
+﻿/* Triceritots.cs
+ * Author: Will Compton 
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu.Sides
 {
-
+    /// <summary>
+    /// Class to add Triceritots to the menu
+    /// </summary>
     public class Triceritots : Side
     {
+        /// <summary>
+        /// Variable to hold the size ordered
+        /// </summary>
         private Size size;
+        /// <summary>
+        /// method to set the price and calories for the tots to the size ordered
+        /// </summary>
         public override Size Size
         {
             set
@@ -33,7 +45,10 @@ namespace DinoDiner.Menu.Sides
             get { return size; }
 
         }
-
+        /// <summary>
+        /// method to add the ingredients to the ingredients list 
+        /// as well as default price and calories
+        /// </summary>
         public Triceritots()
         {
             Price = 0.99;
