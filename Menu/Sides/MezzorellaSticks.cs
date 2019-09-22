@@ -1,5 +1,5 @@
-﻿/* Fryceritops.cs
- * Suthor: Will Compton
+﻿/* MezzorellaSticks.cs
+ * Author: Will Compton
  */
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace DinoDiner.Menu.Sides
         /// </summary>
         private Size size;
         /// <summary>
-        /// method to set the price and calories for the fries to the size ordered
+        /// method to set the price and calories for the sticks to the size ordered
         /// </summary>
         public override Size Size
         {

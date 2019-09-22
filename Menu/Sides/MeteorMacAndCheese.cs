@@ -1,5 +1,5 @@
-﻿/* Fryceritops.cs
- * Suthor: Will Compton
+﻿/* MeteorMacAndCheese.cs
+ * Author: Will Compton
  */
 using System;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Text;
 namespace DinoDiner.Menu.Sides
 {
     /// <summary>
-    /// Adds Mezzorella sticks to the menu as a side
+    /// Adds Meteor Mac and Cheese to the menu as a side
     /// </summary>
     public class MeteorMacAndCheese : Side
     {
@@ -17,7 +17,7 @@ namespace DinoDiner.Menu.Sides
         /// </summary>
         private Size size;
         /// <summary>
-        /// method to set the price and calories for the fries to the size ordered
+        /// method to set the price and calories for the mac and cheese to the size ordered
         /// </summary>
         public override Size Size
         {

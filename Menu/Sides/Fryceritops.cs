@@ -1,5 +1,5 @@
 ﻿/* Fryceritops.cs
- * Suthor: Will Compton
+ * Author: Will Compton
  */
 using System;
 using System.Collections.Generic;

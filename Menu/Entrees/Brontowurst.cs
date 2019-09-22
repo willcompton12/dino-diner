@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿/* Brontowurst.cs
+ * Author: Will Compton 
+ */
+
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
     /// <summary>
-    /// 
+    /// Defines a class to add a brontowurst as an entree to the menu
     /// </summary>
     public class Brontowurst : Entree
     {
@@ -11,7 +15,9 @@ namespace DinoDiner.Menu.Entrees
         private bool peppers = true;
         private bool onions = true;
 
-  
+  /// <summary>
+  /// Creates a list of ingredients to return to user
+  /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -23,7 +29,9 @@ namespace DinoDiner.Menu.Entrees
                 return ingredients;
             }
         }
-
+        /// <summary>
+        /// Sets the price and Calorie fields in the base class
+        /// </summary>
         public Brontowurst()
         {
 
@@ -31,17 +39,22 @@ namespace DinoDiner.Menu.Entrees
             Calories = 498;
         }
         /// <summary>
-        /// 
+        /// Removes bun from ingredients
         /// </summary>
         public void HoldBun()
         {
             this.bun = false;
         }
+        /// <summary>
+        /// Removes peppers from ingredients
+        /// </summary>
         public void HoldPeppers()
         {
             this.peppers = false;
         }
-
+        /// <summary>
+        /// Removes onions from ingredients list
+        /// </summary>
         public void HoldOnion()
         {
             this.onions = false;
