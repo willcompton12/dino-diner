@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DinoDiner.Menu;
+
 
 namespace DinoDiner.Menu.Sides
 {
 
-    public enum Size
-    {
-        Small,
-        Medium, 
-        Large
-    }
 
-    public abstract class Side
+    public abstract class Side 
     {
         protected List<string> ingredients = new List<string>();
         /// <summary>

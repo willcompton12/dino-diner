@@ -4,6 +4,21 @@
         <name>Menu</name>
     </assembly>
     <members>
+        <member name="F:DinoDiner.Menu.Drinks.Sodasaurus.flavor">
+            <summary>
+            private variable to hold what flavor the soda is
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Flavor">
+            <summary>
+            constructor to get and set the flavor for sodasaurus
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Size">
+            <summary>
+            sets the price to the size and returns the size
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
             <summary>
             Defines a class to add a brontowurst as an entree to the menu
@@ -160,6 +175,91 @@
             private boolean values to hold if the customer wants the respective ingredients
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Entrees.TRexKingBurger.Ingredients">
+            <summary>
+            creates a list of ingredients to return to the user
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.#ctor">
+            <summary>
+            Constructor to set price and calorie fields of base class
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldBun">
+            <summary>
+            removes bun from ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldLettuce">
+            <summary>
+            removes lettuce from ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldTomato">
+            <summary>
+            removes tomato from ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldOnion">
+            <summary>
+            removes onion from ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldPickle">
+            <summary>
+            removes pickle from ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldKetchup">
+            <summary>
+            removes ketchup from ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMustard">
+            <summary>
+            removes mustard from ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.TRexKingBurger.HoldMayo">
+            <summary>
+            removes mayo from ingredients
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Entrees.VelociWrap">
+            <summary>
+            Adds veloci wrap to menu as an entree
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Entrees.VelociWrap.dressing">
+            <summary>
+            private boolean values to hold if the customer wants to respective ingredients
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entrees.VelociWrap.Ingredients">
+            <summary>
+            Creates a list of ingredients to return to user
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.#ctor">
+            <summary>
+            Constructor to set price and calorie fields of base class
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldDressing">
+            <summary>
+            removes dressing from ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldLettuce">
+            <summary>
+            removes lettuce from ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Entrees.VelociWrap.HoldCheese">
+            <summary>
+            removes cheese from ingredients
+            </summary>
+        </member>
         <member name="F:DinoDiner.Menu.Sides.Fryceritops.size">
             <summary>
             Variable to hold the size ordered
@@ -178,7 +278,7 @@
         </member>
         <member name="T:DinoDiner.Menu.Sides.MeteorMacAndCheese">
             <summary>
-            Adds Mezzorella sticks to the menu as a side
+            Adds Meteor Mac and Cheese to the menu as a side
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Sides.MeteorMacAndCheese.size">
@@ -188,7 +288,7 @@
         </member>
         <member name="P:DinoDiner.Menu.Sides.MeteorMacAndCheese.Size">
             <summary>
-            method to set the price and calories for the fries to the size ordered
+            method to set the price and calories for the mac and cheese to the size ordered
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Sides.MeteorMacAndCheese.#ctor">
@@ -209,7 +309,7 @@
         </member>
         <member name="P:DinoDiner.Menu.Sides.MezzorellaSticks.Size">
             <summary>
-            method to set the price and calories for the fries to the size ordered
+            method to set the price and calories for the sticks to the size ordered
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Sides.MezzorellaSticks.#ctor">
