@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
 
+
 namespace DinoDiner.Menu.Drinks
 {
-   public abstract class Drink
+    public abstract class Drink
     {
         protected List<string> ingredients = new List<string>();
-        public double Price { get; set; } 
+        public double Price { get; set; }
 
         public uint Calories { get; set; }
 
@@ -20,5 +21,7 @@ namespace DinoDiner.Menu.Drinks
         {
             Ice = false;
         }
+
+        public virtual Size Size {get;set;}
     }
 }
