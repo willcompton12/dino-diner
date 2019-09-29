@@ -10,7 +10,7 @@ namespace MenuTest.Drinks
     public class JurassicJavaTest
     {
 
-      
+
         [Fact]
         public void ShouldHaveCorrectDefaultPrice()
         {
@@ -36,7 +36,7 @@ namespace MenuTest.Drinks
         public void ShoudHaveDefaultCalories()
         {
             JurrasicJava java = new JurrasicJava();
-            Assert.Equal<uint>(112, java.Calories);
+            Assert.Equal<uint>(2, java.Calories);
         }
         [Fact]
         public void ShouldHaveProperDefaultSpaceForCream()
@@ -56,33 +56,64 @@ namespace MenuTest.Drinks
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingMedium()
         {
-            Sodasaurus soda = new Sodasaurus();
-            soda.Size = Size.Medium;
-            Assert.Equal<double>(2.00, soda.Price);
+            JurrasicJava java = new JurrasicJava();
+            java.Size = Size.Medium;
+            Assert.Equal<double>(.99, java.Price);
         }
         [Fact]
         public void ShouldHaveCorrectPriceAfterSettingLarge()
         {
-            Sodasaurus soda = new Sodasaurus();
-            soda.Size = Size.Large;
-            Assert.Equal<double>(2.50, soda.Price);
+            JurrasicJava java = new JurrasicJava();
+            java.Size = Size.Large;
+            Assert.Equal<double>(1.49, java.Price);
         }
-        //That invoking HoldIce() results in the Ice property being false.
+
         [Fact]
-        public void ShouldSetIcePropertyToFalse()
+        public void ShouldHaveCorrectCaloriesAfterSettingSmall()
         {
-            Sodasaurus soda = new Sodasaurus();
-            soda.HoldIce();
-            Assert.False(soda.Ice);
+            JurrasicJava java = new JurrasicJava();
+            java.Size = Size.Medium;
+            java.Size = Size.Small;
+            Assert.Equal<uint>(2, java.Calories);
+        }
+        [Fact]
+        public void ShouldHaveCorrectCaloriesAfterSettingMedium()
+        {
+            JurrasicJava java = new JurrasicJava();
+            java.Size = Size.Medium;
+            Assert.Equal<uint>(4, java.Calories);
+        }
+        [Fact]
+        public void ShouldHaveCorrectCaloriesAfterSettingLarge()
+        {
+            JurrasicJava java = new JurrasicJava();
+            java.Size = Size.Large;
+            Assert.Equal<uint>(8, java.Calories);
+        }
+        //That invoking AddIce() results in the Ice property being True.
+        [Fact]
+        public void ShouldSetIcePropertyToTrue()
+        {
+            JurrasicJava java = new JurrasicJava();
+            java.AddIce();
+            Assert.True(java.Ice);
+        }
+
+        [Fact]
+        public void ShouldMakeSpaceForCream()
+        {
+            JurrasicJava java = new JurrasicJava();
+            java.LeaveRoomForCream();
+            Assert.True(java.RoomForCream);
         }
         //Should have correct ingredients
         [Fact]
         public void ShouldHaveCorrectIngedients()
         {
-            Sodasaurus soda = new Sodasaurus();
-            Assert.Contains<string>("Water", soda.Ingredients);
-            Assert.Contains<string>("Natural Flavors", soda.Ingredients);
-            Assert.Contains<string>("Cane Sugar", soda.Ingredients);
+            JurrasicJava java = new JurrasicJava();
+            Assert.Contains<string>("Water", java.Ingredients);
+            Assert.Contains<string>("Coffee", java.Ingredients);
+            
 
         }
     }
