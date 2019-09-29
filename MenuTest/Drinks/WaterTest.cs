@@ -38,6 +38,12 @@ namespace MenuTest.Drinks
             Water water = new Water();
             Assert.Equal<uint>(0, water.Calories);
         }
+        [Fact]
+        public void ShouldHaveCorrectDefualtLemonProperty()
+        {
+            Water water = new Water();
+            Assert.False(water.Lemon);
+        }
    
         //The correct price and calories after changing to small, medium, and large sizes.
         [Fact]
@@ -110,8 +116,6 @@ namespace MenuTest.Drinks
         {
             Water water = new Water();
             Assert.Contains<string>("Water", water.Ingredients);
-            
-            
 
         }
     }

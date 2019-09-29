@@ -5,9 +5,14 @@ using DinoDiner.Menu;
 
 namespace DinoDiner.Menu.Drinks
 {
+    /// <summary>
+    /// Creates a class to hold a generic soda for the menu
+    /// </summary>
     public class Sodasaurus : Drink
     {
-
+        /// <summary>
+        /// constructor to set default values for the soda
+        /// </summary>
         public Sodasaurus()
         {
             Size = Size.Small;
@@ -16,6 +21,7 @@ namespace DinoDiner.Menu.Drinks
             Ingredients.Add("Water");
             Ingredients.Add("Natural Flavors");
             Ingredients.Add("Cane Sugar");
+            
         }
         /// <summary>
         /// private variable to hold what flavor the soda is

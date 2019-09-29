@@ -5,13 +5,22 @@ using System.Text;
 namespace DinoDiner.Menu.Drinks
 {
     /// <summary>
-    /// Creates a Tyrannotea class to add tea to the menu
+    /// Creates a Jurrasic class to add tea to the menu
     /// </summary>
     public class JurrasicJava : Drink
     {
+        /// <summary>
+        /// Holds if the customer wants room for cream
+        /// </summary>
         public bool RoomForCream = false;
+        /// <summary>
+        /// Holds if the customer wants decaf coffee or not
+        /// </summary>
         public bool Decaf = false;
 
+        /// <summary>
+        /// Constructor to set default values for JurrasicJava
+        /// </summary>
         public JurrasicJava()
         {
             Size = Size.Small;
@@ -22,7 +31,7 @@ namespace DinoDiner.Menu.Drinks
             Ingredients.Add("Coffee");
         }
         /// <summary>
-        /// 
+        /// Sets RoomForCream value to true 
         /// </summary>
       public void LeaveRoomForCream()
         {
@@ -59,11 +68,13 @@ namespace DinoDiner.Menu.Drinks
         }
 
         
-
+        /// <summary>
+        /// Adds ice to ingredients making iced coffee
+        /// </summary>
         public void AddIce()
         {
             Ice = true;
-            
+            Ingredients.Add("Ice");
         }
 
         

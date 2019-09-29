@@ -10,19 +10,89 @@
             </summary>
             <param name="entree">Entree of choice by customer</param>
         </member>
+        <member name="T:DinoDiner.Menu.Drinks.Drink">
+            <summary>
+            Base class to add drinks to the menu
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Drink.ingredients">
+            <summary>
+            variable to hold ingredients in
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Price">
+            <summary>
+            Holds the price of the drink
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Calories">
+            <summary>
+            holds the calories of the drink
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Ingredients">
+            <summary>
+            Returns the list of ingredients
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Ice">
+            <summary>
+            holds if the customer wants ice in their drink or not
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Drink.HoldIce">
+            <summary>
+            removes ice from drink
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Drink.Size">
+            <summary>
+            Holds the size of the drink
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Drinks.JurrasicJava">
             <summary>
-            Creates a Tyrannotea class to add tea to the menu
+            Creates a Jurrasic class to add tea to the menu
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.JurrasicJava.RoomForCream">
+            <summary>
+            Holds if the customer wants room for cream
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.JurrasicJava.Decaf">
+            <summary>
+            Holds if the customer wants decaf coffee or not
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.#ctor">
+            <summary>
+            Constructor to set default values for JurrasicJava
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.LeaveRoomForCream">
             <summary>
-            
+            Sets RoomForCream value to true 
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Drinks.JurrasicJava.Size">
             <summary>
             sets the price to the size and returns the size
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.JurrasicJava.AddIce">
+            <summary>
+            Adds ice to ingredients making iced coffee
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Sodasaurus">
+            <summary>
+            Creates a class to hold a generic soda for the menu
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Sodasaurus.#ctor">
+            <summary>
+            constructor to set default values for the soda
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Drinks.Sodasaurus.flavor">
@@ -40,14 +110,70 @@
             sets the price to the size and returns the size
             </summary>
         </member>
+        <member name="T:DinoDiner.Menu.Drinks.SodasaurusFlavor">
+            <summary>
+            enum to hold the different available flavors of SodaSaurus 
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Cola">
+            <summary>
+            Cola flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Orange">
+            <summary>
+            orange flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Vanilla">
+            <summary>
+            Vanilla Flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Chocolate">
+            <summary>
+            Chocolate flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.RootBeer">
+            <summary>
+            Rootbeer flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Cherry">
+            <summary>
+            Cherry flavoring
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.SodasaurusFlavor.Lime">
+            <summary>
+            Lime flavoring
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Drinks.Tyrannotea">
             <summary>
             Creates a Tyrannotea class to add tea to the menu
             </summary>
         </member>
+        <member name="F:DinoDiner.Menu.Drinks.Tyrannotea.Sweet">
+            <summary>
+            Holds if the customer wants sweet tea or not
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Tyrannotea.Lemon">
+            <summary>
+            holds if the customer wants lemon with their tea
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.#ctor">
+            <summary>
+            constructor to set the default values of the tea
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.MakeSweet">
             <summary>
-            
+            Sets sweet to true, adds sugar to the ingredients list, and sets the default calories
+            to 16 if the customer wants sweet tea
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Size">
@@ -55,14 +181,37 @@
             sets the price to the size and returns the size
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.AddLemon">
+            <summary>
+            Adds Lemon to the ingredients and sets lemon to true 
+            if the customer wants lemon with their tea
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Drinks.Water">
             <summary>
-            Creates a Tyrannotea class to add tea to the menu
+            Creates a Water class to add water to the menu
             </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Drinks.Water.Lemon">
+            <summary>
+            Holds if the customer wants lemon with their tea or not
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Water.#ctor">
+            <summary>
+            constructor to set default values for water
+            </summary> 
+            
         </member>
         <member name="P:DinoDiner.Menu.Drinks.Water.Size">
             <summary>
             sets the price to the size and returns the size
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Water.AddLemon">
+            <summary>
+            Adds lemon to the ingredients and sets lemon to true
+            if the customer wants lemon with their water
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Entrees.Brontowurst">
@@ -403,6 +552,26 @@
             <summary>
             method to add the ingredients to the ingredients list 
             as well as default price and calories
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Size">
+            <summary>
+            enum to hold the available sizes
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Size.Small">
+            <summary>
+            small size
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Size.Medium">
+            <summary>
+            medium size
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Size.Large">
+            <summary>
+            Large size
             </summary>
         </member>
     </members>
