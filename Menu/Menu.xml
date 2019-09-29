@@ -4,6 +4,12 @@
         <name>Menu</name>
     </assembly>
     <members>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entrees.Entree)">
+            <summary>
+            Constructor to create a Cretaceous combo
+            </summary>
+            <param name="entree">Entree of choice by customer</param>
+        </member>
         <member name="F:DinoDiner.Menu.Drinks.Sodasaurus.flavor">
             <summary>
             private variable to hold what flavor the soda is
@@ -15,6 +21,21 @@
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Drinks.Sodasaurus.Size">
+            <summary>
+            sets the price to the size and returns the size
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Drinks.Tyrannotea">
+            <summary>
+            Creates a Tyrannotea class to add tea to the menu
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Drinks.Tyrannotea.MakeSweet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drinks.Tyrannotea.Size">
             <summary>
             sets the price to the size and returns the size
             </summary>

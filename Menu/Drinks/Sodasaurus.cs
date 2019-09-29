@@ -13,6 +13,9 @@ namespace DinoDiner.Menu.Drinks
             Size = Size.Small;
             Price = 1.5;
             Calories = 112;
+            Ingredients.Add("Water");
+            Ingredients.Add("Natural Flavors");
+            Ingredients.Add("Cane Sugar");
         }
         /// <summary>
         /// private variable to hold what flavor the soda is
