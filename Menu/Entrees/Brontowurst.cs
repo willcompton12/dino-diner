@@ -3,22 +3,26 @@
  */
 
 using System.Collections.Generic;
+using DinoDiner.Menu;
 
 namespace DinoDiner.Menu.Entrees
 {
     /// <summary>
     /// Defines a class to add a brontowurst as an entree to the menu
     /// </summary>
-    public class Brontowurst : Entree
+    public class Brontowurst : IMenuItem
     {
         private bool bun = true;
         private bool peppers = true;
         private bool onions = true;
+        public double Price { get; set; } = 5.36;
+        public uint Calories { get; set; } = 498;
+
 
   /// <summary>
   /// Creates a list of ingredients to return to user
   /// </summary>
-        public override List<string> Ingredients
+        public List<string> Ingredients
         {
             get
             {
@@ -35,15 +39,15 @@ namespace DinoDiner.Menu.Entrees
         public Brontowurst()
         {
 
-            Price = 5.36;
-            Calories = 498;
+          
+           
         }
         /// <summary>
         /// Removes bun from ingredients
         /// </summary>
         public void HoldBun()
         {
-            this.bun = false;
+            bun = false;
         }
         /// <summary>
         /// Removes peppers from ingredients

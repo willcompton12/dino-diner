@@ -9,14 +9,17 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Adds a PBJ sandwich to the menu as an entree
     /// </summary>
-    public class PrehistoricPBJ : Entree
+    public class PrehistoricPBJ : IMenuItem
     {
         private bool peanutButter = true;
         private bool jelly = true;
+        public double Price { get; set; } = 6.52;
+
+        public uint Calories { get; set; } = 483;
         /// <summary>
         /// Creates a list of ingredients to return to the user
         /// </summary>
-        public override List<string> Ingredients
+        public List<string> Ingredients
         {
             get
             {
