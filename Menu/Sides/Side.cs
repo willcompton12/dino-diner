@@ -7,9 +7,14 @@ using DinoDiner.Menu;
 namespace DinoDiner.Menu
 {
 
-
+    /// <summary>
+    /// Base class for side items that uses the IMenuItem interface to add the sides to the menu
+    /// </summary>
     public abstract class Side : IMenuItem
     {
+        /// <summary>
+        /// List of ingredients that is ultimately overwritten
+        /// </summary>
         protected List<string> ingredients = new List<string>();
         /// <summary>
         /// Gets and sets the price

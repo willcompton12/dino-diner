@@ -5,8 +5,14 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
+    /// <summary>
+    /// Class that keeps track of available items on the menu
+    /// </summary>
     public class Menu
     {
+        /// <summary>
+        /// All available items on the menu
+        /// </summary>
         public List<IMenuItem> AvailableMenuItems
         {
             get
@@ -31,6 +37,9 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// All available Entrees on the menu
+        /// </summary>
         public List<IMenuItem> AvailableEntrees
         {
             get
@@ -46,7 +55,9 @@ namespace DinoDiner.Menu
                 return entrees;
             }
         }
-
+        /// <summary>
+        /// All available Sides on the menu
+        /// </summary>
         public List<IMenuItem> AvailableSides
         {
             get
@@ -59,7 +70,9 @@ namespace DinoDiner.Menu
                 return sides;
             }
         }
-
+        /// <summary>
+        /// All available Drinks on the menu
+        /// </summary>
         public List<IMenuItem> AvailableDrinks
         {
             get
@@ -73,7 +86,11 @@ namespace DinoDiner.Menu
 
             }
         }
-
+        /// <summary>
+        /// Overrides the ToString method and returns a string of 
+        /// all available items seperated by a new line
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

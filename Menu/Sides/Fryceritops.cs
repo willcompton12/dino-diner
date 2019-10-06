@@ -7,7 +7,9 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-
+    /// <summary>
+    /// Adds Fries to the menu as a side
+    /// </summary>
     public class Fryceritops : Side
     {
         /// <summary>
@@ -63,6 +65,11 @@ namespace DinoDiner.Menu
             }
         }
 
+        /// <summary>
+        /// Overrides the ToString method and allows us to return 
+        /// the name of the side item with proper formatting
+        /// </summary>
+        /// <returns>Name of side item as type string</returns>
         public override string ToString()
         {
             return (this.size + " Fryceritops");

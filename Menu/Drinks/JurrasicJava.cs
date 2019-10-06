@@ -28,7 +28,9 @@ namespace DinoDiner.Menu
             Calories = 2;
             Ice = false;
         }
-
+        /// <summary>
+        /// Create a list of immutable ingredients
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -50,7 +52,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// sets the price to the size and returns the size
         /// </summary>
-        public Size Size
+        public override Size Size
         {
             get { return size; }
             set
@@ -85,12 +87,17 @@ namespace DinoDiner.Menu
             Ice = true;
             Ingredients.Add("Ice");
         }
-
+        /// <summary>
+        /// Allows the Customer to make the coffee Decaf
+        /// </summary>
         public void MakeDecaf()
         {
             Decaf = true;
         }
-
+        /// <summary>
+        /// Overrides ToString to return the name of the drink as we want it
+        /// </summary>
+        /// <returns>Name of Drink</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

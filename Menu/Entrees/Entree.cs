@@ -5,9 +5,16 @@ using System.Text;
 namespace DinoDiner.Menu
 {
 
-
+    /// <summary>
+    /// Base class that Entree items derive from.
+    /// uses interface IMenuItem to make entrees part 
+    /// of the menu
+    /// </summary>
     public abstract class Entree : IMenuItem
     {
+        /// <summary>
+        /// instance to build the ingredients with. This is ultimately overwritten.
+        /// </summary>
         protected List<string> ingredients = new List<string>();
         /// <summary>
         /// Gets and sets the price

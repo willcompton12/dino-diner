@@ -20,7 +20,9 @@ namespace DinoDiner.Menu
             Calories = 112;
             
         }
-
+        /// <summary>
+        /// Creates list of immutable ingredients
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -51,7 +53,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// sets the price to the size and returns the size
         /// </summary>
-        public Size Size
+        public override Size Size
         {
             get { return size; }
             set { size = value;
@@ -72,6 +74,10 @@ namespace DinoDiner.Menu
                 }
             }
         }
+        /// <summary>
+        /// Overrides ToString to return the name of the drink as we want it
+        /// </summary>
+        /// <returns>Name of Drink</returns>
         public override string ToString()
         {
             return this.size + " " + this.Flavor.ToString() + " Sodasaurus";

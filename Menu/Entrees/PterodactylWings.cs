@@ -13,7 +13,9 @@ namespace DinoDiner.Menu
     {
 
        
-
+        /// <summary>
+        /// Creates list of immutable ingredients
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -34,7 +36,11 @@ namespace DinoDiner.Menu
             Calories = 318;
            
         }
-
+        /// <summary>
+        /// Overrides the ToString method and allows us to return 
+        /// the name of the entree item with proper formatting
+        /// </summary>
+        /// <returns>Name of entree item as type string</returns>
         public override string ToString()
         {
             return ("Pterodactyl Wings");

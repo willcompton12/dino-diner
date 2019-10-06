@@ -4,15 +4,62 @@
         <name>Menu</name>
     </assembly>
     <members>
+        <member name="T:DinoDiner.Menu.CretaceousCombo">
+            <summary>
+            Class to allow customers to get a combo meal at a slightly cheaper price
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Entree">
+            <summary>
+            Sets the entree of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Side">
+            <summary>
+            The side of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Drink">
+            <summary>
+            The drink of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Price">
+            <summary>
+            sets how much the combo price is.
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Calories">
+            <summary>
+            Returns the total calories of the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Size">
+            <summary>
+            Sets the size for the drink and side in the combo
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.CretaceousCombo.Ingredients">
+            <summary>
+            Creates a list of all of the ingredients in the combo
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.CretaceousCombo.#ctor(DinoDiner.Menu.Entree)">
             <summary>
             Constructor to create a Cretaceous combo
             </summary>
             <param name="entree">Entree of choice by customer</param>
         </member>
+        <member name="M:DinoDiner.Menu.CretaceousCombo.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the Combo with proper formatting
+            </summary>
+            <returns>Name of Combo as type string</returns>
+        </member>
         <member name="T:DinoDiner.Menu.Drink">
             <summary>
-            Base class to add drinks to the menu
+            Base class to add drinks to the menu that uses the interface IMenuItem
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Drink.ingredients">
@@ -70,6 +117,11 @@
             Constructor to set default values for JurrasicJava
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.JurrasicJava.Ingredients">
+            <summary>
+            Create a list of immutable ingredients
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.JurrasicJava.LeaveRoomForCream">
             <summary>
             Sets RoomForCream value to true 
@@ -85,6 +137,17 @@
             Adds ice to ingredients making iced coffee
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.JurrasicJava.MakeDecaf">
+            <summary>
+            Allows the Customer to make the coffee Decaf
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.JurrasicJava.ToString">
+            <summary>
+            Overrides ToString to return the name of the drink as we want it
+            </summary>
+            <returns>Name of Drink</returns>
+        </member>
         <member name="T:DinoDiner.Menu.Sodasaurus">
             <summary>
             Creates a class to hold a generic soda for the menu
@@ -93,6 +156,11 @@
         <member name="M:DinoDiner.Menu.Sodasaurus.#ctor">
             <summary>
             constructor to set default values for the soda
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Ingredients">
+            <summary>
+            Creates list of immutable ingredients
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.Sodasaurus.flavor">
@@ -109,6 +177,12 @@
             <summary>
             sets the price to the size and returns the size
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.ToString">
+            <summary>
+            Overrides ToString to return the name of the drink as we want it
+            </summary>
+            <returns>Name of Drink</returns>
         </member>
         <member name="T:DinoDiner.Menu.SodasaurusFlavor">
             <summary>
@@ -182,10 +256,21 @@
             if the customer wants lemon with their tea
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Ingredients">
+            <summary>
+            Creates list of immutable ingredients
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Tyrannotea.Size">
             <summary>
             sets the price to the size and returns the size
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.ToString">
+            <summary>
+            Overrides ToString to return the name of the drink as we want it
+            </summary>
+            <returns>Name of Drink</returns>
         </member>
         <member name="T:DinoDiner.Menu.Water">
             <summary>
@@ -203,6 +288,11 @@
             </summary> 
             
         </member>
+        <member name="P:DinoDiner.Menu.Water.Ingredients">
+            <summary>
+            Creates list of immutable ingredients
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Water.Size">
             <summary>
             sets the price to the size and returns the size
@@ -213,6 +303,12 @@
             Adds lemon to the ingredients and sets lemon to true
             if the customer wants lemon with their water
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Water.ToString">
+            <summary>
+            Overrides ToString to return the name of the drink as we want it
+            </summary>
+            <returns>Name of Drink</returns>
         </member>
         <member name="T:DinoDiner.Menu.Brontowurst">
             <summary>
@@ -244,6 +340,13 @@
             Removes onions from ingredients list
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Brontowurst.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the entree item with proper formatting
+            </summary>
+            <returns>Name of entree item as type string</returns>
+        </member>
         <member name="T:DinoDiner.Menu.DinoNuggets">
             <summary>
             Adds Dino nuggets to the menu as an entree
@@ -267,6 +370,25 @@
         <member name="M:DinoDiner.Menu.DinoNuggets.AddNugget">
             <summary>
             Method called to add a nugget to the order
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.DinoNuggets.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the entree item with proper formatting
+            </summary>
+            <returns>Name of entree item as type string</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Entree">
+            <summary>
+            Base class that Entree items derive from.
+            uses interface IMenuItem to make entrees part 
+            of the menu
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Entree.ingredients">
+            <summary>
+            instance to build the ingredients with. This is ultimately overwritten.
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Entree.Price">
@@ -309,9 +431,21 @@
             removes jelly from list of ingredients
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the entree item with proper formatting
+            </summary>
+            <returns>Name of entree item as type string</returns>
+        </member>
         <member name="T:DinoDiner.Menu.PterodactylWings">
             <summary>
             Adds Pterodactyl wings and an entree
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.PterodactylWings.Ingredients">
+            <summary>
+            Creates list of immutable ingredients
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.PterodactylWings.#ctor">
@@ -319,6 +453,13 @@
             constructor to add ingredients, price and calories to variables created in
             the base class
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.PterodactylWings.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the entree item with proper formatting
+            </summary>
+            <returns>Name of entree item as type string</returns>
         </member>
         <member name="T:DinoDiner.Menu.SteakosaurusBurger">
             <summary>
@@ -359,6 +500,13 @@
             <summary>
             removes mustard from ingredients
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the entree item with proper formatting
+            </summary>
+            <returns>Name of entree item as type string</returns>
         </member>
         <member name="T:DinoDiner.Menu.TRexKingBurger">
             <summary>
@@ -420,6 +568,13 @@
             removes mayo from ingredients
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.TRexKingBurger.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the entree item with proper formatting
+            </summary>
+            <returns>Name of entree item as type string</returns>
+        </member>
         <member name="T:DinoDiner.Menu.VelociWrap">
             <summary>
             Adds veloci wrap to menu as an entree
@@ -455,6 +610,71 @@
             removes cheese from ingredients
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.VelociWrap.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the entree item with proper formatting
+            </summary>
+            <returns>Name of entree item as type string</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.IMenuItem">
+            <summary>
+            Interface to allow the Entrees, Sides, and Drinks
+            be added to the "menu"
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Price">
+            <summary>
+            Price of the item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Calories">
+            <summary>
+            Calories of the item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IMenuItem.Ingredients">
+            <summary>
+            ingredients of the item
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.Menu">
+            <summary>
+            Class that keeps track of available items on the menu
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableMenuItems">
+            <summary>
+            All available items on the menu
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableEntrees">
+            <summary>
+            All available Entrees on the menu
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableSides">
+            <summary>
+            All available Sides on the menu
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableDrinks">
+            <summary>
+            All available Drinks on the menu
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.ToString">
+            <summary>
+            Overrides the ToString method and returns a string of 
+            all available items seperated by a new line
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Fryceritops">
+            <summary>
+            Adds Fries to the menu as a side
+            </summary>
+        </member>
         <member name="F:DinoDiner.Menu.Fryceritops.size">
             <summary>
             Variable to hold the size ordered
@@ -470,6 +690,13 @@
             method to add the ingredients to the ingredients list 
             as well as default price and calories
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Fryceritops.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the side item with proper formatting
+            </summary>
+            <returns>Name of side item as type string</returns>
         </member>
         <member name="T:DinoDiner.Menu.MeteorMacAndCheese">
             <summary>
@@ -492,6 +719,18 @@
             as well as default price and calories
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Ingredients">
+            <summary>
+            creates list of immutable ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.MeteorMacAndCheese.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the side item with proper formatting
+            </summary>
+            <returns>Name of side item as type string</returns>
+        </member>
         <member name="T:DinoDiner.Menu.MezzorellaSticks">
             <summary>
             Adds Mezzorella sticks to the menu as a side
@@ -511,6 +750,28 @@
             <summary>
             method to add the ingredients to the ingredients list 
             as well as default price and calories
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Ingredients">
+            <summary>
+            Creates list of immutable ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.MezzorellaSticks.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the side item with proper formatting
+            </summary>
+            <returns>Name of side item as type string</returns>
+        </member>
+        <member name="T:DinoDiner.Menu.Side">
+            <summary>
+            Base class for side items that uses the IMenuItem interface to add the sides to the menu
+            </summary>
+        </member>
+        <member name="F:DinoDiner.Menu.Side.ingredients">
+            <summary>
+            List of ingredients that is ultimately overwritten
             </summary>
         </member>
         <member name="P:DinoDiner.Menu.Side.Price">
@@ -553,6 +814,18 @@
             method to add the ingredients to the ingredients list 
             as well as default price and calories
             </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Triceritots.Ingredients">
+            <summary>
+            Creates list of immutable ingredients
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Triceritots.ToString">
+            <summary>
+            Overrides the ToString method and allows us to return 
+            the name of the side item with proper formatting
+            </summary>
+            <returns>Name of side item as type string</returns>
         </member>
         <member name="T:DinoDiner.Menu.Size">
             <summary>

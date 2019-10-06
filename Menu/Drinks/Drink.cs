@@ -7,7 +7,7 @@ using DinoDiner.Menu;
 namespace DinoDiner.Menu
 {
     /// <summary>
-    /// Base class to add drinks to the menu
+    /// Base class to add drinks to the menu that uses the interface IMenuItem
     /// </summary>
     public abstract class Drink : IMenuItem
     {

@@ -46,7 +46,9 @@ namespace DinoDiner.Menu
         {
             Lemon = true;
         }
-
+        /// <summary>
+        /// Creates list of immutable ingredients
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -94,8 +96,11 @@ namespace DinoDiner.Menu
             }
         }
 
-       
 
+        /// <summary>
+        /// Overrides ToString to return the name of the drink as we want it
+        /// </summary>
+        /// <returns>Name of Drink</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

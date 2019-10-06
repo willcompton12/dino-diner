@@ -54,7 +54,9 @@ namespace DinoDiner.Menu
             Price = 0.99;
             Calories = 352;
         }
-
+        /// <summary>
+        /// Creates list of immutable ingredients
+        /// </summary>
         public override List<string> Ingredients
         {
             get
@@ -66,7 +68,11 @@ namespace DinoDiner.Menu
                 return ingredients;
             }
         }
-
+        /// <summary>
+        /// Overrides the ToString method and allows us to return 
+        /// the name of the side item with proper formatting
+        /// </summary>
+        /// <returns>Name of side item as type string</returns>
         public override string ToString()
         {
             return (this.size + " Triceritots");

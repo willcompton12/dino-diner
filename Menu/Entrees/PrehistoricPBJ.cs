@@ -48,6 +48,11 @@ namespace DinoDiner.Menu
         {
             jelly = false;
         }
+        /// <summary>
+        /// Overrides the ToString method and allows us to return 
+        /// the name of the entree item with proper formatting
+        /// </summary>
+        /// <returns>Name of entree item as type string</returns>
         public override string ToString()
         {
             return ("Prehistoric PB&J");
