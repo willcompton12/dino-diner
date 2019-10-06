@@ -55,6 +55,8 @@ namespace DinoDiner.Menu
                 return entrees;
             }
         }
+
+    
         /// <summary>
         /// All available Sides on the menu
         /// </summary>
@@ -97,6 +99,10 @@ namespace DinoDiner.Menu
             foreach (IMenuItem m in AvailableMenuItems)
             {
                 sb.Append(m + "\n");
+            }
+            foreach(IMenuItem g in AvailableEntrees)
+            {
+                sb.Append(g + " Combo");
             }
             return sb.ToString();
         }
