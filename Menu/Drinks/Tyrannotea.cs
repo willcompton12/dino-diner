@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Creates a Tyrannotea class to add tea to the menu
@@ -25,20 +25,41 @@ namespace DinoDiner.Menu.Drinks
             Size = Size.Small;
             Price = 0.99;
             Calories = 8;
-            Ingredients.Add("Water");
-            Ingredients.Add("Tea");
             
         }
+
         /// <summary>
         /// Sets sweet to true, adds sugar to the ingredients list, and sets the default calories
         /// to 16 if the customer wants sweet tea
         /// </summary>
-      public void MakeSweet()
+        public void MakeSweet()
         {
             Sweet = true;
-            Ingredients.Add("Cane Sugar");
             Calories = 16;
         }
+
+        /// <summary>
+        /// Adds Lemon to the ingredients and sets lemon to true 
+        /// if the customer wants lemon with their tea
+        /// </summary>
+        public void AddLemon()
+        {
+            Lemon = true;
+        }
+
+        public override List<string> Ingredients
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+                if (Lemon) ingredients.Add("Lemon");
+                if (Sweet) ingredients.Add("Cane Sugar");
+                ingredients.Add("Water");
+                ingredients.Add("Tea");
+                return ingredients;
+            }
+        }
+      
         private Size size;
         /// <summary>
         /// sets the price to the size and returns the size
@@ -73,15 +94,7 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
-        /// <summary>
-        /// Adds Lemon to the ingredients and sets lemon to true 
-        /// if the customer wants lemon with their tea
-        /// </summary>
-        public void AddLemon()
-        {
-            Lemon = true;
-            Ingredients.Add("Lemon");
-        }
+       
 
         public override string ToString()
         {

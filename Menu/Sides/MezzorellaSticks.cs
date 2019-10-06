@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Adds Mezzorella sticks to the menu as a side
@@ -52,9 +52,18 @@ namespace DinoDiner.Menu.Sides
         {
             Price = 0.99;
             Calories = 540;
-            Ingredients.Add("Cheese Product");
-            Ingredients.Add("Breading");
-            Ingredients.Add("Vegetable Oil");
+        }
+
+        public override List<string> Ingredients
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+                ingredients.Add("Cheese Product");
+                ingredients.Add("Breading");
+                ingredients.Add("Vegetable Oil");
+                return ingredients;
+            }
         }
 
         public override string ToString()

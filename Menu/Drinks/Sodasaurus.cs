@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Creates a class to hold a generic soda for the menu
@@ -18,10 +18,20 @@ namespace DinoDiner.Menu.Drinks
             Size = Size.Small;
             Price = 1.5;
             Calories = 112;
-            Ingredients.Add("Water");
-            Ingredients.Add("Natural Flavors");
-            Ingredients.Add("Cane Sugar");
             
+        }
+
+        public override List<string> Ingredients
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+
+                ingredients.Add("Water");
+                ingredients.Add("Natural Flavors");
+                ingredients.Add("Cane Sugar");
+                return ingredients;
+            }
         }
         /// <summary>
         /// private variable to hold what flavor the soda is

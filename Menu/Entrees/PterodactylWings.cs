@@ -3,19 +3,18 @@
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Adds Pterodactyl wings and an entree
     /// </summary>
-    public class PterodactylWings : IMenuItem
+    public class PterodactylWings : Entree
 
     {
 
-        public double Price { get; set; } = 7.21;
-        public uint Calories { get; set; } = 318;
+       
 
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -31,7 +30,8 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public PterodactylWings()
         {
-            
+            Price = 7.21;
+            Calories = 318;
            
         }
 

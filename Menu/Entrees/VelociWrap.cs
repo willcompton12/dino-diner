@@ -3,12 +3,12 @@
  */
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Adds veloci wrap to menu as an entree
     /// </summary>
-    public class VelociWrap : IMenuItem
+    public class VelociWrap : Entree
     {
         /// <summary>
         /// private boolean values to hold if the customer wants to respective ingredients
@@ -16,13 +16,11 @@ namespace DinoDiner.Menu.Entrees
         private bool dressing = true;
         private bool lettuce = true;
         private bool cheese = true;
-        public double Price { get; set; } = 6.86;
-        public uint Calories { get; set; } = 356;
 
         /// <summary>
         /// Creates a list of ingredients to return to user
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {
@@ -38,6 +36,8 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public VelociWrap()
         {
+            Price = 6.86;
+            Calories = 356;
         }
         /// <summary>
         /// removes dressing from ingredients

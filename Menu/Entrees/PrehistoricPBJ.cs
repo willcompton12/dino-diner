@@ -4,22 +4,19 @@
 
 using System.Collections.Generic;
 
-namespace DinoDiner.Menu.Entrees
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Adds a PBJ sandwich to the menu as an entree
     /// </summary>
-    public class PrehistoricPBJ : IMenuItem
+    public class PrehistoricPBJ : Entree
     {
         private bool peanutButter = true;
         private bool jelly = true;
-        public double Price { get; set; } = 6.52;
-
-        public uint Calories { get; set; } = 483;
         /// <summary>
         /// Creates a list of ingredients to return to the user
         /// </summary>
-        public List<string> Ingredients
+        public override List<string> Ingredients
         {
             get
             {

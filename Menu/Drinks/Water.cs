@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Creates a Water class to add water to the menu
@@ -24,8 +24,17 @@ namespace DinoDiner.Menu.Drinks
             Size = Size.Small;
             Price = 0.10;
             Calories = 0;
-            Ingredients.Add("Water");
            
+        }
+
+        public override List<string> Ingredients
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+                ingredients.Add("Water");
+                return ingredients;
+            }
         }
         private Size size;
         /// <summary>
@@ -47,14 +56,16 @@ namespace DinoDiner.Menu.Drinks
         public void AddLemon()
         {
             Lemon = true;
-            Ingredients.Add("Lemon");
         }
 
 
         
         public override string ToString()
         {
-            return "Water";
+            StringBuilder sb = new StringBuilder();
+            sb.Append(size);
+            sb.Append(" Water");
+            return sb.ToString();
         }
 
 

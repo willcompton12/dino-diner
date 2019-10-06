@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Creates a Jurrasic class to add tea to the menu
@@ -27,8 +27,17 @@ namespace DinoDiner.Menu.Drinks
             Price = 0.59;
             Calories = 2;
             Ice = false;
-            Ingredients.Add("Water");
-            Ingredients.Add("Coffee");
+        }
+
+        public override List<string> Ingredients
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+                ingredients.Add("Water");
+                ingredients.Add("Coffee");
+                return ingredients;
+            }
         }
         /// <summary>
         /// Sets RoomForCream value to true 

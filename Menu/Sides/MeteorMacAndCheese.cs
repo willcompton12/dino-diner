@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DinoDiner.Menu.Sides
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Adds Meteor Mac and Cheese to the menu as a side
@@ -52,9 +52,18 @@ namespace DinoDiner.Menu.Sides
         {
             Price = 0.99;
             Calories = 420;
-            Ingredients.Add("Cheese Product");
-            Ingredients.Add("Macaroni Noodles");
-            Ingredients.Add("Pork Sausage");
+        }
+
+        public override List<string> Ingredients
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+                ingredients.Add("Cheese Product");
+                ingredients.Add("Macaroni Noodles");
+                ingredients.Add("Pork Sausage");
+                return ingredients;
+            }
         }
 
         public override string ToString()

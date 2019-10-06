@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DinoDiner.Menu.Drinks;
-using DinoDiner.Menu.Sides;
-using DinoDiner.Menu.Entrees;
+
 
 
 namespace DinoDiner.Menu
@@ -87,6 +85,14 @@ namespace DinoDiner.Menu
             Side = new Fryceritops();
             Drink = new Sodasaurus();
 
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(this.Entree.ToString());
+            sb.Append(" Combo");
+            return sb.ToString() ;
         }
 
 

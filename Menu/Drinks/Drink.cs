@@ -4,7 +4,7 @@ using System.Text;
 using DinoDiner.Menu;
 
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     /// <summary>
     /// Base class to add drinks to the menu
@@ -26,7 +26,7 @@ namespace DinoDiner.Menu.Drinks
         /// <summary>
         /// Returns the list of ingredients
         /// </summary>
-        public List<string> Ingredients { get { return ingredients; } }
+        public virtual List<string> Ingredients { get { return ingredients; } }
         /// <summary>
         /// holds if the customer wants ice in their drink or not
         /// </summary>

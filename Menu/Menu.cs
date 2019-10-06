@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DinoDiner.Menu.Drinks;
-using DinoDiner.Menu.Entrees;
-using DinoDiner.Menu.Sides;
+
 
 namespace DinoDiner.Menu
 {
@@ -76,8 +74,16 @@ namespace DinoDiner.Menu
             }
         }
 
-     
-            
-        
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (IMenuItem m in AvailableMenuItems)
+            {
+                sb.Append(m + "\n");
+            }
+            return sb.ToString();
+        }
+
+
     }
 }
