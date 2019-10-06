@@ -102,7 +102,7 @@ namespace DinoDiner.Menu
             }
             foreach(IMenuItem g in AvailableEntrees)
             {
-                sb.Append(g + " Combo");
+                sb.Append(g + " Combo" + "\n");
             }
             return sb.ToString();
         }
