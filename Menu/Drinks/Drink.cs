@@ -9,7 +9,7 @@ namespace DinoDiner.Menu.Drinks
     /// <summary>
     /// Base class to add drinks to the menu
     /// </summary>
-    public abstract class Drink
+    public abstract class Drink : IMenuItem
     {
         /// <summary>
         /// variable to hold ingredients in

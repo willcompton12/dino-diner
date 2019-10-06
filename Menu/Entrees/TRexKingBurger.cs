@@ -9,7 +9,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Adds TRex King Burger to menu as an entree
     /// </summary>
-    public class TRexKingBurger : Entree
+    public class TRexKingBurger : IMenuItem
     {
         /// <summary>
         /// private boolean values to hold if the customer wants the respective ingredients
@@ -22,10 +22,12 @@ namespace DinoDiner.Menu.Entrees
         private bool ketchup = true;
         private bool mustard = true;
         private bool mayo = true;
+        public double Price { get; set; } = 8.45;
+        public uint Calories { get; set; } = 728;
         /// <summary>
         /// creates a list of ingredients to return to the user
         /// </summary>
-        public override List<string> Ingredients
+        public List<string> Ingredients
         {
             get
             {
@@ -46,8 +48,7 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public TRexKingBurger()
         {
-            Price = 8.45;
-            Calories = 728;
+            
         }
         /// <summary>
         /// removes bun from ingredients
@@ -105,6 +106,10 @@ namespace DinoDiner.Menu.Entrees
         public void HoldMayo()
         {
             this.mayo = false;
+        }
+        public override string ToString()
+        {
+            return ("T-Rex King Burger");
         }
     }
 }

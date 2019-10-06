@@ -77,6 +77,24 @@ namespace DinoDiner.Menu.Drinks
             Ingredients.Add("Ice");
         }
 
-        
+        public void MakeDecaf()
+        {
+            Decaf = true;
+        }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(this.size);
+            sb.Append(" ");
+            if (Decaf)
+            {
+                sb.Append("Decaf ");
+            }
+            sb.Append("Jurrasic Java");
+            return sb.ToString();
+        }
+
+
     }
 }

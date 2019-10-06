@@ -63,5 +63,10 @@ namespace DinoDiner.Menu.Entrees
         {
             this.onions = false;
         }
+
+        public override string ToString()
+        {
+            return ("Brontowurst");
+        }
     }
 }

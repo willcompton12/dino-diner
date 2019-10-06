@@ -56,6 +56,11 @@ namespace DinoDiner.Menu.Sides
             Ingredients.Add("Macaroni Noodles");
             Ingredients.Add("Pork Sausage");
         }
+
+        public override string ToString()
+        {
+            return (this.size + " Meteor Mac and Cheese");
+        }
     }
     
      

@@ -113,8 +113,16 @@ namespace MenuTest.Drinks
             JurrasicJava java = new JurrasicJava();
             Assert.Contains<string>("Water", java.Ingredients);
             Assert.Contains<string>("Coffee", java.Ingredients);
-            
 
+
+        }
+        [Fact]
+        public void ShouldHaveCorrectToString()
+        {
+            JurrasicJava java = new JurrasicJava();
+            java.MakeDecaf();
+            java.Size = Size.Medium;
+            Assert.Equal("Medium Decaf Jurrasic Java", java.ToString());
         }
     }
 }

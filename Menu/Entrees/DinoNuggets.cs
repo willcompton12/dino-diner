@@ -52,6 +52,10 @@ namespace DinoDiner.Menu.Entrees
             Price += .25;
 
         }
-       
+        public override string ToString()
+        {
+            return ("Dino-Nuggets");
+        }
+
     }
 }

@@ -169,6 +169,13 @@ namespace MenuTest.Drinks
             
         }
 
-
+        [Fact]
+        public void ShouldHaveCorrectToString()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.MakeSweet();
+            tea.Size = Size.Medium;
+            Assert.Equal("Medium Sweet Tyranno-Tea", tea.ToString());
+        }
     }
 }

@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Adds Steakosaurus Burger to the menu as an entree
     /// </summary>
-    public class SteakosaurusBurger : Entree
+    public class SteakosaurusBurger : IMenuItem
     {
         /// <summary>
         /// Private boolean values to hold if the customer wants the respective ingredients
@@ -17,11 +17,13 @@ namespace DinoDiner.Menu.Entrees
         private bool pickle = true;
         private bool ketchup = true;
         private bool mustard = true;
+        public double Price { get; set; } = 5.15;
+        public uint Calories { get; set; } = 621;
 
         /// <summary>
         /// Creates a list of ingredients to return to the user
         /// </summary>
-        public override List<string> Ingredients
+        public List<string> Ingredients
         {
             get
             {
@@ -39,8 +41,7 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public SteakosaurusBurger()
         {
-            Price = 5.15;
-            Calories = 621;
+           
         }
 
         /// <summary>
@@ -72,6 +73,10 @@ namespace DinoDiner.Menu.Entrees
         public void HoldMustard()
         {
             this.mustard = false;
+        }
+        public override string ToString()
+        {
+            return ("Steakosaurus Burger");
         }
     }
 }

@@ -8,7 +8,7 @@ namespace DinoDiner.Menu.Sides
 {
 
 
-    public abstract class Side 
+    public abstract class Side : IMenuItem
     {
         protected List<string> ingredients = new List<string>();
         /// <summary>

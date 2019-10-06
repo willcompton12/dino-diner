@@ -62,6 +62,10 @@ namespace DinoDiner.Menu.Drinks
                 }
             }
         }
-        
+        public override string ToString()
+        {
+            return this.size + " " + this.Flavor.ToString() + " Sodasaurus";
+        }
+
     }
 }

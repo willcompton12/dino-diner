@@ -83,6 +83,18 @@ namespace DinoDiner.Menu.Drinks
             Ingredients.Add("Lemon");
         }
 
-        
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append(this.size);
+            sb.Append(" ");
+            if (Sweet)
+            {
+                sb.Append("Sweet ");
+            }
+            sb.Append("Tyranno-Tea");
+            return sb.ToString();
+        }
+
     }
 }

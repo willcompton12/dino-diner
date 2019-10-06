@@ -8,21 +8,37 @@ namespace DinoDiner.Menu.Entrees
     /// <summary>
     /// Adds Pterodactyl wings and an entree
     /// </summary>
-    public class PterodactylWings : Entree
+    public class PterodactylWings : IMenuItem
 
     {
+
+        public double Price { get; set; } = 7.21;
+        public uint Calories { get; set; } = 318;
+
+        public List<string> Ingredients
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+                ingredients.Add("Chicken");
+                ingredients.Add("Wing Sauce");
+                return ingredients;
+            }
+        }
         /// <summary>
         /// constructor to add ingredients, price and calories to variables created in
         /// the base class
         /// </summary>
         public PterodactylWings()
         {
-            Price = 7.21;
-            Calories = 318;
-            ingredients.Add("Chicken");
-            ingredients.Add("Wing Sauce");
+            
+           
         }
 
-      
+        public override string ToString()
+        {
+            return ("Pterodactyl Wings");
+        }
+
     }
 }

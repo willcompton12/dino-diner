@@ -139,5 +139,13 @@ namespace MenuTest.Drinks
             Assert.Contains<string>("Cane Sugar", soda.Ingredients);
 
         }
+        [Fact]
+        public void ShouldHaveCorrectToString()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            soda.Flavor = SodasaurusFlavor.Cherry;
+            soda.Size = Size.Large;
+            Assert.Equal("Large Cherry Sodasaurus", soda.ToString());
+        }
     }
 }
