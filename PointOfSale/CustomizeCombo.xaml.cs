@@ -17,19 +17,15 @@ using DinoDiner.Menu;
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for ComboSelection.xaml
+    /// Interaction logic for CustomizeCombo.xaml
     /// </summary>
-    public partial class ComboSelection : Page
+    public partial class CustomizeCombo : Page
     {
-        public ComboSelection()
-        {
-            InitializeComponent();
-        }
-
-        private void Bronto(object sender, RoutedEventArgs e)
+        public CustomizeCombo()
         {
             
-            NavigationService.Navigate(new CustomizeCombo());
+            InitializeComponent();
+            
         }
     }
 }
