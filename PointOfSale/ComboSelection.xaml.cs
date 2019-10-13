@@ -31,5 +31,42 @@ namespace PointOfSale
             
             NavigationService.Navigate(new CustomizeCombo());
         }
+
+        private void Nugged(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(new CustomizeCombo());
+        }
+
+        private void Steako(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(new CustomizeCombo());
+        }
+
+        private void King(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(new CustomizeCombo());
+        }
+
+        private void PBJ(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(new CustomizeCombo());
+        }
+
+        private void Wings(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(new CustomizeCombo());
+        }
+
+        private void Wrapped(object sender, RoutedEventArgs e)
+        {
+
+            NavigationService.Navigate(new CustomizeCombo());
+        }
+
     }
 }
