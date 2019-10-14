@@ -28,6 +28,11 @@ namespace PointOfSale
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event handler for when the Soda button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SodaClick(object sender, RoutedEventArgs e)
         {
             
@@ -39,6 +44,11 @@ namespace PointOfSale
             chxHoldIce.IsEnabled = true;
         }
 
+        /// <summary>
+        /// Event handler for when the tea button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TyrannoteaClick(object sender, RoutedEventArgs e)
         {
 
@@ -48,7 +58,11 @@ namespace PointOfSale
             chxHoldIce.IsEnabled = true;
             chxLemon.IsEnabled = true;
         }
-
+        /// <summary>
+        /// Event handler for when the java button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void jurrasicJavaClick(object sender, RoutedEventArgs e)
         {
             chxFlavor.IsEnabled = false;
@@ -60,7 +74,11 @@ namespace PointOfSale
             chxHoldIce.IsEnabled = true;
             chxHoldIce.Content = "Add Ice";
         }
-
+        /// <summary>
+        /// Event handler for when the Water button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WaterClick(object sender, RoutedEventArgs e)
         {
             chxFlavor.IsEnabled = false;
@@ -69,7 +87,11 @@ namespace PointOfSale
             chxLemon.IsEnabled = true;
             chxHoldIce.IsEnabled = true;
         }
-
+        /// <summary>
+        /// Event handler for when the Flavor button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FlavorClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new FlavorSelection());

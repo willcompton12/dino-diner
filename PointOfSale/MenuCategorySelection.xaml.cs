@@ -21,28 +21,44 @@ namespace PointOfSale
     public partial class MenuCategorySelection : Page
     {
         /// <summary>
-        /// 
+        /// Creates a page to start the customers order
         /// </summary>
         public MenuCategorySelection()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Event handler for when the Combo button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         void SelectCombo(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new ComboSelection());
         }
-
+        /// <summary>
+        /// Event handler for when the Drink button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         void Drinks(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new DrinkSelection());
         }
-
+        /// <summary>
+        /// Event handler for when the Entree button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         void SelectEntree(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new EntreeSelection());
         }
-
+        /// <summary>
+        /// Event handler for when the Side button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         void SelectSide(object sender, RoutedEventArgs args)
         {
             NavigationService.Navigate(new SideSelection());

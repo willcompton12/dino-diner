@@ -21,18 +21,29 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCombo : Page
     {
+        /// <summary>
+        /// Creates the page to allow user to customize the combo
+        /// </summary>
         public CustomizeCombo()
         {
             
             InitializeComponent();
             
         }
-
+        /// <summary>
+        /// Event handler for when the Drink button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectDrink(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new DrinkSelection());
         }
-
+        /// <summary>
+        /// Event handler for when the side button is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectSide(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SideSelection());

@@ -20,6 +20,9 @@ namespace PointOfSale
     /// </summary>
     public partial class EntreeSelection : Page
     {
+        /// <summary>
+        /// Creates a page to allow the user to select an entree
+        /// </summary>
         public EntreeSelection()
         {
             InitializeComponent();
