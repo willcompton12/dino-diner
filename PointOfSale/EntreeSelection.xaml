@@ -1,0 +1,79 @@
+﻿<Page x:Class="PointOfSale.EntreeSelection"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:PointOfSale"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EntreeSelection">
+
+    <Grid>
+        <TextBlock FontSize="28" Text="Add to Order" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+        <Grid Margin="60,40,60,10">
+            <Grid.Resources>
+                <Style TargetType="Button">
+                    <Setter Property="Width" Value="140"></Setter>
+                    <Setter Property="Height" Value="110"></Setter>
+
+                </Style>
+            </Grid.Resources>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Row="0" Grid.Column="0" Background="White" RenderTransformOrigin="0.5,0.5">
+
+
+                <StackPanel>
+                    <Image Width="80" Source="Assets/DinoDiner-01.png"/>
+                    <TextBlock Text="Brontowurst"/>
+                </StackPanel>
+            </Button>
+            <Button  Grid.Row="0" Grid.Column="1" Background="White">
+                <StackPanel>
+                    <Image  Height ="70" Width="80" Source="Assets/DinoDiner-02.png"/>
+                    <TextBlock Text="Dino-Nuggets"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="0" Grid.Column="2" Background="White">
+                <StackPanel>
+
+                    <Image Height="70" Width="80" Source="Assets/DinoDiner-05.png"/>
+                    <TextBlock Text="Steakosaurus Burger"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="1" Background="White">
+                <StackPanel>
+                    <Image Width="70" Source="Assets/DinoDiner-06.png"/>
+                    <TextBlock Text="T-Rex King Burger"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="1" Grid.Column="1" Background="White">
+                <StackPanel>
+                    <Image Width="80" Source="Assets/DinoDiner-03.png"/>
+                    <TextBlock Text="Prehistroric PB&amp;J"/>
+                </StackPanel>
+            </Button>
+            <Button  Grid.Row="1" Grid.Column="2" Background="White">
+                <StackPanel>
+                    <Image Width="70" Source="Assets/DinoDiner-04.png"/>
+                    <TextBlock Text="Pterodactyl Wings"/>
+                </StackPanel>
+            </Button>
+            <Button Grid.Row="2" Grid.Column="1" Background="White">
+                <StackPanel>
+                    <Image Width="80" Source="Assets/DinoDiner-07.png"/>
+                    <TextBlock Text="Veloci-Wrap"/>
+
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

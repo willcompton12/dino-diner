@@ -12,30 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using DinoDiner.Menu;
 
 namespace PointOfSale
 {
     /// <summary>
-    /// Interaction logic for CustomizeCombo.xaml
+    /// Interaction logic for FlavorSelection.xaml
     /// </summary>
-    public partial class CustomizeCombo : Page
+    public partial class FlavorSelection : Page
     {
-        public CustomizeCombo()
+        public FlavorSelection()
         {
-            
             InitializeComponent();
-            
-        }
-
-        private void SelectDrink(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new DrinkSelection());
-        }
-
-        private void SelectSide(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new SideSelection());
         }
     }
 }

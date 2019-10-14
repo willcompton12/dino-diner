@@ -19,9 +19,9 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button Height="150" Width="200" Background="White" Click="SelectCombo" Grid.Row="0" Grid.Column="0">Combos</Button>
-            <Button Height="150" Width="200" Background="White" Grid.Row="0" Grid.Column="1">Entrees</Button>
-            <Button Height="150" Width="200" Background="White" Grid.Row="1" Grid.Column="0">Sides</Button>
-            <Button Height="150" Width="200" Background="White" Grid.Row="1" Grid.Column="1">Drinks</Button>
+            <Button Height="150" Width="200" Background="White" Grid.Row="0" Grid.Column="1" Click="SelectEntree">Entrees</Button>
+            <Button Height="150" Width="200" Background="White" Grid.Row="1" Grid.Column="0" Click="SelectSide">Sides</Button>
+            <Button Height="150" Width="200" Background="White" Grid.Row="1" Grid.Column="1" Click="Drinks">Drinks</Button>
         </Grid>
     </Grid>
 </Page>

@@ -20,6 +20,9 @@ namespace PointOfSale
     /// </summary>
     public partial class MenuCategorySelection : Page
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public MenuCategorySelection()
         {
             InitializeComponent();
@@ -29,5 +32,21 @@ namespace PointOfSale
         {
             NavigationService.Navigate(new ComboSelection());
         }
+
+        void Drinks(object sender, RoutedEventArgs args)
+        {
+            NavigationService.Navigate(new DrinkSelection());
+        }
+
+        void SelectEntree(object sender, RoutedEventArgs args)
+        {
+            NavigationService.Navigate(new EntreeSelection());
+        }
+
+        void SelectSide(object sender, RoutedEventArgs args)
+        {
+            NavigationService.Navigate(new SideSelection());
+        }
+
     }
 }
