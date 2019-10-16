@@ -411,6 +411,17 @@
             Adds a PBJ sandwich to the menu as an entree
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.PrehistoricPBJ.PropertyChanged">
+            <summary>
+            An event handler for property changed event
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.PrehistoricPBJ.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
         <member name="P:DinoDiner.Menu.PrehistoricPBJ.Ingredients">
             <summary>
             Creates a list of ingredients to return to the user
@@ -437,6 +448,16 @@
             the name of the entree item with proper formatting
             </summary>
             <returns>Name of entree item as type string</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Description">
+            <summary>
+            gets a description of the order item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.PrehistoricPBJ.Special">
+            <summary>
+            gets special instructions for making the sandwich
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.PterodactylWings">
             <summary>

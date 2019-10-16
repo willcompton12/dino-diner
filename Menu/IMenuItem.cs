@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -8,7 +9,7 @@ namespace DinoDiner.Menu
     /// Interface to allow the Entrees, Sides, and Drinks
     /// be added to the "menu"
     /// </summary>
-    public interface IMenuItem
+    public interface IMenuItem : INotifyPropertyChanged
     {
         /// <summary>
         /// Price of the item

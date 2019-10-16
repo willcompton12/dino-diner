@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Xunit;
 using DinoDiner.Menu;
+using System.ComponentModel;
 
 namespace MenuTest.Entrees
 {
@@ -46,6 +47,70 @@ namespace MenuTest.Entrees
             pbj.HoldJelly();
             Assert.DoesNotContain<string>("Jelly", pbj.Ingredients);
         }
+
+        [Fact]
+        public void DescriptionShouldBeCorrect()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            Assert.Equal("Prehistoric PB&J", pbj.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            Assert.Empty(pbj.Special);
+        }
+
+        [Fact]
+        public void HoldPeanutButterShouldAddToSpecial()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            pbj.HoldPeanutButter();
+            Assert.Collection<string>(pbj.Special, item =>
+            {
+                Assert.Equal("Hold Peanut Butter", item);
+            });
+        }
+
+        [Fact]
+        public void HoldJellyShouldAddToSpecial()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            pbj.HoldJelly();
+            Assert.Collection<string>(pbj.Special, item =>
+            {
+                Assert.Equal("Hold Jelly", item);
+            });
+        }
+
+        [Fact]
+        public void HoldPeanutButterAndJellyShouldAddToSpecial()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            pbj.HoldJelly();
+            pbj.HoldPeanutButter();
+            Assert.Collection<string>(pbj.Special, item =>
+            {
+                Assert.Equal("Hold Peanut Butter", item);
+            },
+            item=>
+            {
+                Assert.Equal("Hold Jelly", item);
+            });
+        }
+
+        [Fact]
+        public void HoldingPeanutButterShouldNotifySpecialChange()
+        {
+            PrehistoricPBJ pbj = new PrehistoricPBJ();
+            Assert.PropertyChanged(pbj, "Special", () =>
+            {
+                pbj.HoldPeanutButter();
+            });
+
+        }
+
     }
 
 }
