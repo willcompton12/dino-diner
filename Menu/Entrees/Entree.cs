@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace DinoDiner.Menu
@@ -12,6 +13,7 @@ namespace DinoDiner.Menu
     /// </summary>
     public abstract class Entree : IMenuItem
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// instance to build the ingredients with. This is ultimately overwritten.
         /// </summary>
@@ -31,6 +33,6 @@ namespace DinoDiner.Menu
         /// </summary>
         public virtual List<string> Ingredients { get { return ingredients; } }
 
-
+        
     }
 }
