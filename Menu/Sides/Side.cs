@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
-
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -35,6 +35,15 @@ namespace DinoDiner.Menu
         /// Gets or sets the size
         /// </summary>
         public virtual Size Size { get; set; }
+        /// <summary>
+        /// Desription of the entree
+        /// </summary>
+        public string Description { get; }
+        /// <summary>
+        /// special instructions for the item
+        /// </summary>
+        public string[] Special { get; set; }
 
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

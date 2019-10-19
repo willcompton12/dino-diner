@@ -4,6 +4,7 @@
 
 using System.Collections.Generic;
 using DinoDiner.Menu;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -15,6 +16,17 @@ namespace DinoDiner.Menu
         private bool bun = true;
         private bool peppers = true;
         private bool onions = true;
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         /// <summary>
         /// Creates a list of ingredients to return to user
@@ -45,6 +57,8 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             bun = false;
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// Removes peppers from ingredients
@@ -52,6 +66,8 @@ namespace DinoDiner.Menu
         public void HoldPeppers()
         {
             this.peppers = false;
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// Removes onions from ingredients list
@@ -59,6 +75,8 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             this.onions = false;
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// Overrides the ToString method and allows us to return 
@@ -68,6 +86,28 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return ("Brontowurst");
+        }
+        /// <summary>
+        /// gets a description of the order item
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+
+        }
+        /// <summary>
+        /// gets special instructions for making the sandwich
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!bun) special.Add("Hold Bun");
+                if (!peppers) special.Add("Hold Peppers");
+                if (!onions) special.Add("Hold Onions");
+                return special.ToArray();
+            }
         }
     }
 }

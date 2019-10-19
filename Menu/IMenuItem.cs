@@ -9,7 +9,7 @@ namespace DinoDiner.Menu
     /// Interface to allow the Entrees, Sides, and Drinks
     /// be added to the "menu"
     /// </summary>
-    public interface IMenuItem : INotifyPropertyChanged
+    public interface IMenuItem : IOrderItem
     {
         /// <summary>
         /// Price of the item

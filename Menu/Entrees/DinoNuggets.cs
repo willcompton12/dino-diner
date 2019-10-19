@@ -2,6 +2,7 @@
  * Author: Will Compton
  */
 using System.Collections.Generic;
+using System.ComponentModel;
 
 
 namespace DinoDiner.Menu
@@ -16,6 +17,16 @@ namespace DinoDiner.Menu
         /// keeps track of the total number of nuggets 
         /// </summary>
         private int total = 6;
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// Creates a list of ingredients to return to the user
         /// </summary>

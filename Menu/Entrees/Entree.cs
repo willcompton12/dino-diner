@@ -13,7 +13,6 @@ namespace DinoDiner.Menu
     /// </summary>
     public abstract class Entree : IMenuItem
     {
-        public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// instance to build the ingredients with. This is ultimately overwritten.
         /// </summary>
@@ -32,7 +31,15 @@ namespace DinoDiner.Menu
         /// Gets the ingredients list
         /// </summary>
         public virtual List<string> Ingredients { get { return ingredients; } }
+        /// <summary>
+        /// Desription of the entree
+        /// </summary>
+        public string Description { get;}
+        /// <summary>
+        /// special instructions for the item
+        /// </summary>
+        public string[] Special { get; set; }
 
-        
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }
