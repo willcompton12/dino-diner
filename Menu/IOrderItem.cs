@@ -13,7 +13,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// price of the item
         /// </summary>
-        double Price { get; set; }
+        double Price { get;}
         /// <summary>
         /// description of the item
         /// </summary>
@@ -21,7 +21,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// special instructions for the item
         /// </summary>
-        string[] Special { get; set; }
+        string[] Special { get; }
 
 
     }

@@ -55,6 +55,15 @@ namespace DinoDiner.Menu
         {
             return ("Pterodactyl Wings");
         }
+        /// <summary>
+        /// returns a description of the entree
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
 
+        }
+      
+      
     }
 }
