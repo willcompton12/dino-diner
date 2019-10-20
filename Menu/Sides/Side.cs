@@ -10,8 +10,21 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Base class for side items that uses the IMenuItem interface to add the sides to the menu
     /// </summary>
-    public abstract class Side : IMenuItem
+    public abstract class Side : IMenuItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// Event for PropertyChanged
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// Event Hnadler for when a property is changed
+        /// to update the gui
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// List of ingredients that is ultimately overwritten
         /// </summary>
@@ -42,8 +55,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// special instructions for the item
         /// </summary>
-        public string[] Special { get; set; }
+        public virtual string[] Special { get; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

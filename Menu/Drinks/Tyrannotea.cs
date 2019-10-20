@@ -10,15 +10,7 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Tyrannotea : Drink
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="propertyName"></param>
-        protected void NotifyOfPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
         /// <summary>
         /// Holds if the customer wants sweet tea or not
         /// </summary>
@@ -48,6 +40,7 @@ namespace DinoDiner.Menu
             Calories = 16;
             NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Description");
+            NotifyOfPropertyChanged("Calories");
         }
 
         /// <summary>
@@ -141,7 +134,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// gets special instructions 
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

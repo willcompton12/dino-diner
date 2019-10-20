@@ -100,16 +100,7 @@ namespace MenuTest.Entrees
             Assert.Empty(dn.Special);
         }
 
-        [Fact]
-        public void AddNuggetShouldAddToSpecial()
-        {
-            DinoNuggets dn = new DinoNuggets();
-            dn.AddNugget();
-            Assert.Collection<string>(dn.Special, item =>
-            {
-                Assert.Equal("1 Extra Nuggets", item);
-            });
-        }
+     
         [Fact]
         public void AddingNuggetShouldNotifySpecialChange()
         {

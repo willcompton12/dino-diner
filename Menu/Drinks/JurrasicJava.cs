@@ -10,18 +10,7 @@ namespace DinoDiner.Menu
     /// </summary>
     public class JurrasicJava : Drink
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        public new event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="propertyName"></param>
-        protected  void NotifyPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
 
         /// <summary>
         /// Holds if the customer wants room for cream
@@ -61,7 +50,7 @@ namespace DinoDiner.Menu
       public void LeaveRoomForCream()
         {
             RoomForCream = true;
-            NotifyPropertyChanged("Special");
+            NotifyOfPropertyChanged("Special");
         }
         private Size size;
         /// <summary>
@@ -90,8 +79,8 @@ namespace DinoDiner.Menu
                     Calories = 8;
                 }
 
-                NotifyPropertyChanged("Price");
-                NotifyPropertyChanged("Calories");
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Calories");
 
             }
         }
@@ -104,8 +93,8 @@ namespace DinoDiner.Menu
         {
             Ice = true;
             Ingredients.Add("Ice");
-            NotifyPropertyChanged("Ingredients");
-            NotifyPropertyChanged("Special");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// Allows the Customer to make the coffee Decaf
@@ -113,7 +102,7 @@ namespace DinoDiner.Menu
         public void MakeDecaf()
         {
             Decaf = true;
-            NotifyPropertyChanged("Description");
+            NotifyOfPropertyChanged("Description");
         }
         /// <summary>
         /// Overrides ToString to return the name of the drink as we want it
@@ -143,7 +132,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// gets special instructions 
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

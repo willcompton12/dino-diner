@@ -12,15 +12,7 @@ namespace DinoDiner.Menu
     public class VelociWrap : Entree
     {
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="propertyName"></param>
-        protected void NotifyOfPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+       
         /// <summary>
         /// private boolean values to hold if the customer wants to respective ingredients
         /// </summary>

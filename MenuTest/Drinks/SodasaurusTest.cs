@@ -146,5 +146,41 @@ namespace MenuTest.Drinks
             soda.Size = Size.Large;
             Assert.Equal("Large Cherry Sodasaurus", soda.ToString());
         }
+
+        [Fact]
+        public void DescriptionShouldBeCorrect()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            soda.Flavor = SodasaurusFlavor.Cherry;
+            soda.Size = Size.Large;
+            Assert.Equal("Large Cherry Sodasaurus", soda.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Empty(soda.Special);
+        }
+
+        
+        [Fact]
+        public void holdIceShouldAddToSpecial()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            soda.HoldIce();
+            Assert.Collection<string>(soda.Special, item =>
+            {
+                Assert.Equal("Hold Ice", item);
+            });
+        }
+       
+        [Fact]
+        public void HoldIceShouldNotifySpecialChange()
+        {
+
+            Sodasaurus soda = new Sodasaurus();
+            Assert.PropertyChanged(soda, "Special", () => soda.HoldIce());
+        }
     }
 }

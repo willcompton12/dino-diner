@@ -13,15 +13,7 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Fryceritops : Side
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="propertyName"></param>
-        protected void NotifyOfPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+       
         /// <summary>
         /// Variable to hold the size ordered
         /// </summary>
@@ -39,19 +31,26 @@ namespace DinoDiner.Menu
                     case Size.Small:
                         Price = 0.99;
                         Calories = 222;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Description");
                         break;
                     case Size.Medium:
                         Price = 1.45;
                         Calories = 365;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Description");
                         break;
                     case Size.Large:
                         Price = 1.95;
                         Calories = 480;
+                        NotifyOfPropertyChanged("Price");
+                        NotifyOfPropertyChanged("Calories");
+                        NotifyOfPropertyChanged("Description");
                         break;
                 }
-                NotifyOfPropertyChanged("Price");
-                NotifyOfPropertyChanged("Calories");
-                NotifyOfPropertyChanged("Description");
+       
 
             }
             get { return size; }
@@ -95,7 +94,19 @@ namespace DinoDiner.Menu
             get { return this.ToString(); }
 
         }
-     
+        /// <summary>
+        /// gets special instructions 
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
+        }
+
+
     }
     
      

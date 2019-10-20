@@ -13,16 +13,7 @@ namespace DinoDiner.Menu
 
     {
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="propertyName"></param>
-        protected void NotifyOfPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
-
+       
         /// <summary>
         /// Creates list of immutable ingredients
         /// </summary>

@@ -12,15 +12,7 @@ namespace DinoDiner.Menu
     public class Sodasaurus : Drink
     {
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="propertyName"></param>
-        protected void NotifyOfPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
         /// <summary>
         /// constructor to set default values for the soda
         /// </summary>
@@ -104,6 +96,19 @@ namespace DinoDiner.Menu
             get { return this.ToString(); }
 
         }
+        /// <summary>
+        /// Returns special instructions for the drink
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!Ice) special.Add("Hold Ice");
+                return special.ToArray();
+            }
+        }
+
 
     }
 }

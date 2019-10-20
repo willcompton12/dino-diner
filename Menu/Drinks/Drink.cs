@@ -10,11 +10,12 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Base class to add drinks to the menu that uses the interface IMenuItem
     /// </summary>
-    public abstract class Drink : IMenuItem
+    public abstract class Drink : IMenuItem , INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
-        /// 
+        /// Event Hnadler for when a property is changed
+        /// to update the gui
         /// </summary>
         /// <param name="propertyName"></param>
         protected void NotifyOfPropertyChanged(string propertyName)
@@ -47,7 +48,7 @@ namespace DinoDiner.Menu
         public void HoldIce()
         {
             Ice = false;
-            NotifyOfPropertyChanged("Description");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// Holds the size of the drink
@@ -61,7 +62,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// special instructions for the item
         /// </summary>
-        public string[] Special { get; set; }
+        public virtual string[] Special { get; }
 
     }
 }

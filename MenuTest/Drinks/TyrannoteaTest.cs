@@ -176,5 +176,75 @@ namespace MenuTest.Drinks
             tea.Size = Size.Medium;
             Assert.Equal("Medium Sweet Tyranno-Tea", tea.ToString());
         }
+        [Fact]
+        public void DescriptionShouldBeCorrect()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            Assert.Equal("Small Tyranno-Tea", tea.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            Assert.Empty(tea.Special);
+        }
+
+        [Fact]
+        public void AddLemonShouldAddToSpecial()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.AddLemon();
+            Assert.Collection<string>(tea.Special, item =>
+            {
+                Assert.Equal("Add Lemon", item);
+            });
+        }
+        [Fact]
+        public void holdIceShouldAddToSpecial()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.HoldIce();
+            Assert.Collection<string>(tea.Special, item =>
+            {
+                Assert.Equal("Hold Ice", item);
+            });
+        }
+        [Fact]
+        public void holdIceAndAddLemonShouldAddToSpecial()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.HoldIce();
+            tea.AddLemon();
+            Assert.Collection<string>(tea.Special, item =>
+            {
+                Assert.Equal("Add Lemon", item);
+            },
+            item =>
+            {
+                Assert.Equal("Hold Ice", item);
+            });
+        }
+        [Fact]
+        public void MakeSweetShouldAddToDescription()
+        {
+            Tyrannotea tea = new Tyrannotea();
+            tea.MakeSweet();
+            Assert.Equal("Small Sweet Tyranno-Tea", tea.Description);
+        }
+        [Fact]
+        public void AddLemonShouldNotifySpecialChange()
+        {  
+        
+            Tyrannotea tea = new Tyrannotea();
+            Assert.PropertyChanged(tea, "Special", () => tea.AddLemon());
+        }
+        [Fact]
+        public void HoldIceShouldNotifySpecialChange()
+        {
+
+            Tyrannotea tea = new Tyrannotea();
+            Assert.PropertyChanged(tea, "Special", () => tea.HoldIce());
+        }
     }
 }

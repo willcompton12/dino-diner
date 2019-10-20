@@ -12,15 +12,7 @@ namespace DinoDiner.Menu
     public class SteakosaurusBurger : Entree
     {
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="propertyName"></param>
-        protected void NotifyOfPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
         /// <summary>
         /// Private boolean values to hold if the customer wants the respective ingredients
         /// </summary>

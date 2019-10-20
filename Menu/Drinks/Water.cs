@@ -11,15 +11,7 @@ namespace DinoDiner.Menu
     public class Water : Drink
     {
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="propertyName"></param>
-        protected void NotifyOfPropertyChanged(string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        
         /// <summary>
         /// Holds if the customer wants lemon with their tea or not
         /// </summary>
@@ -69,7 +61,7 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
-            NotifyOfPropertyChanged("Description");
+            NotifyOfPropertyChanged("Special");
         }
 
 
@@ -95,7 +87,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// gets special instructions 
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

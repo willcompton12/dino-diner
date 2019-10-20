@@ -117,5 +117,69 @@ namespace MenuTest.Drinks
             Assert.Contains<string>("Water", water.Ingredients);
 
         }
+        [Fact]
+        public void DescriptionShouldBeCorrect()
+        {
+            Water water = new Water();
+            Assert.Equal("Small Water", water.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            Water water = new Water();
+            Assert.Empty(water.Special);
+        }
+
+        [Fact]
+        public void AddLemonShouldAddToSpecial()
+        {
+            Water water = new Water();
+            water.AddLemon();
+            Assert.Collection<string>(water.Special, item =>
+            {
+                Assert.Equal("Add Lemon", item);
+            });
+        }
+        [Fact]
+        public void holdIceShouldAddToSpecial()
+        {
+            Water water = new Water();
+            water.HoldIce();
+            Assert.Collection<string>(water.Special, item =>
+            {
+                Assert.Equal("Hold Ice", item);
+            });
+        }
+        [Fact]
+        public void holdIceAndAddLemonShouldAddToSpecial()
+        {
+            Water water = new Water();
+            water.HoldIce();
+            water.AddLemon();
+            Assert.Collection<string>(water.Special, item =>
+            {
+                Assert.Equal("Add Lemon", item);
+            },
+            item =>
+            {
+                Assert.Equal("Hold Ice", item);
+            });
+        }
+      
+        [Fact]
+        public void AddLemonShouldNotifySpecialChange()
+        {
+
+            Water water = new Water();
+            Assert.PropertyChanged(water, "Special", () => water.AddLemon());
+        }
+        [Fact]
+        public void HoldIceShouldNotifySpecialChange()
+        {
+
+            Water water = new Water();
+            Assert.PropertyChanged(water, "Special", () => water.HoldIce());
+        }
     }
 }

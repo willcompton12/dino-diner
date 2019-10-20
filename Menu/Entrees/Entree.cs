@@ -11,7 +11,7 @@ namespace DinoDiner.Menu
     /// uses interface IMenuItem to make entrees part 
     /// of the menu
     /// </summary>
-    public abstract class Entree : IMenuItem
+    public abstract class Entree : IMenuItem, INotifyPropertyChanged
     {
         /// <summary>
         /// instance to build the ingredients with. This is ultimately overwritten.
@@ -38,8 +38,18 @@ namespace DinoDiner.Menu
         /// <summary>
         /// special instructions for the item
         /// </summary>
-        public string[] Special { get; }
-
+        public virtual string[] Special { get; }
+        /// <summary>
+        /// Event for Property Changed
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        ///  Event Handler for when a property is changed
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }
