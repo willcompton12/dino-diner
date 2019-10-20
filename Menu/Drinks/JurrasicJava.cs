@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -9,6 +10,19 @@ namespace DinoDiner.Menu
     /// </summary>
     public class JurrasicJava : Drink
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        public new event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected  void NotifyPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         /// <summary>
         /// Holds if the customer wants room for cream
         /// </summary>
@@ -47,6 +61,7 @@ namespace DinoDiner.Menu
       public void LeaveRoomForCream()
         {
             RoomForCream = true;
+            NotifyPropertyChanged("Special");
         }
         private Size size;
         /// <summary>
@@ -74,7 +89,10 @@ namespace DinoDiner.Menu
                     Price = 1.49;
                     Calories = 8;
                 }
-               
+
+                NotifyPropertyChanged("Price");
+                NotifyPropertyChanged("Calories");
+
             }
         }
 
@@ -86,6 +104,8 @@ namespace DinoDiner.Menu
         {
             Ice = true;
             Ingredients.Add("Ice");
+            NotifyPropertyChanged("Ingredients");
+            NotifyPropertyChanged("Special");
         }
         /// <summary>
         /// Allows the Customer to make the coffee Decaf
@@ -93,6 +113,7 @@ namespace DinoDiner.Menu
         public void MakeDecaf()
         {
             Decaf = true;
+            NotifyPropertyChanged("Description");
         }
         /// <summary>
         /// Overrides ToString to return the name of the drink as we want it
@@ -110,6 +131,29 @@ namespace DinoDiner.Menu
             sb.Append("Jurrasic Java");
             return sb.ToString();
         }
+
+        /// <summary>
+        /// Provides a description of the Drink
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+
+        }
+        /// <summary>
+        /// gets special instructions 
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (RoomForCream) special.Add("Leave Room For Cream");
+                if (Ice) special.Add("Add Ice");
+                return special.ToArray();
+            }
+        }
+
 
 
     }

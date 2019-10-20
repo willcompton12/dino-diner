@@ -12,6 +12,15 @@ namespace DinoDiner.Menu
     /// </summary>
     public abstract class Drink : IMenuItem
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// variable to hold ingredients in
         /// </summary>
@@ -38,6 +47,7 @@ namespace DinoDiner.Menu
         public void HoldIce()
         {
             Ice = false;
+            NotifyOfPropertyChanged("Description");
         }
         /// <summary>
         /// Holds the size of the drink
@@ -45,7 +55,7 @@ namespace DinoDiner.Menu
         public virtual Size Size {get;set;}
 
         /// <summary>
-        /// Desription of the entree
+        /// Desription of the Drink
         /// </summary>
         public string Description { get; }
         /// <summary>
@@ -53,6 +63,5 @@ namespace DinoDiner.Menu
         /// </summary>
         public string[] Special { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

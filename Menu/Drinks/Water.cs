@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -9,6 +10,16 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Water : Drink
     {
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// Holds if the customer wants lemon with their tea or not
         /// </summary>
@@ -58,6 +69,7 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
+            NotifyOfPropertyChanged("Description");
         }
 
 
@@ -71,6 +83,27 @@ namespace DinoDiner.Menu
             sb.Append(size);
             sb.Append(" Water");
             return sb.ToString();
+        }
+        /// <summary>
+        /// Provides a description of the Drink
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+
+        }
+        /// <summary>
+        /// gets special instructions 
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (Lemon) special.Add("Add Lemon");
+                if (!Ice) special.Add("Hold Ice");
+                return special.ToArray();
+            }
         }
 
 

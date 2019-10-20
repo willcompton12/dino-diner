@@ -3,12 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
+using System.ComponentModel;
 
 namespace MenuTest.Drinks
 {
-    public class JurasicJavaTest
+    public class JurasicJavaTest 
     {
-
+        
 
         [Fact]
         public void ShouldHaveCorrectDefaultPrice()
@@ -123,5 +124,56 @@ namespace MenuTest.Drinks
             java.Size = Size.Medium;
             Assert.Equal("Medium Decaf Jurrasic Java", java.ToString());
         }
+        [Fact]
+        public void DescriptionShouldBeCorrect()
+        {
+            JurrasicJava java = new JurrasicJava();
+            Assert.Equal("Small Jurrasic Java", java.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            JurrasicJava java = new JurrasicJava();
+            Assert.Empty(java.Special);
+        }
+
+        [Fact]
+        public void LeaveRoomForCreamShouldAddToSpecial()
+        {
+            JurrasicJava java = new JurrasicJava();
+            java.LeaveRoomForCream();
+            Assert.Collection<string>(java.Special, item =>
+            {
+                Assert.Equal("Leave Room For Cream", item);
+            });
+        }
+        [Fact]
+        public void AddIceShouldAddToSpecial()
+        {
+            JurrasicJava java = new JurrasicJava();
+            java.AddIce();
+            Assert.Collection<string>(java.Special, item =>
+            {
+                Assert.Equal("Add Ice", item);
+            });
+        }
+        [Fact]
+        public void MakeDecafShouldAddToDescription()
+        {
+            JurrasicJava java = new JurrasicJava();
+            java.MakeDecaf();
+            Assert.Equal("Small Decaf Jurrasic Java", java.Description);
+        }
+        [Fact]
+        public void LeaveRoomForCreamShouldNotifySpecialChange()
+        {
+            JurrasicJava java = new JurrasicJava();
+            Assert.PropertyChanged(java, "Special", () => java.LeaveRoomForCream());
+            
+
+        }
+       
+
     }
 }

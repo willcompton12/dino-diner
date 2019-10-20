@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -10,6 +11,16 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Sodasaurus : Drink
     {
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// constructor to set default values for the soda
         /// </summary>
@@ -72,6 +83,9 @@ namespace DinoDiner.Menu
                     Price = 2.50;
                     Calories = 208;
                 }
+
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Calories");
             }
         }
         /// <summary>
@@ -81,6 +95,14 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return this.size + " " + this.Flavor.ToString() + " Sodasaurus";
+        }
+        /// <summary>
+        /// Provides a description of the Drink
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+
         }
 
     }

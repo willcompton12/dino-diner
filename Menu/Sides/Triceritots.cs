@@ -5,6 +5,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
@@ -13,6 +14,15 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Triceritots : Side
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// Variable to hold the size ordered
         /// </summary>
@@ -40,7 +50,10 @@ namespace DinoDiner.Menu
                         Calories = 590;
                         break;
                 }
-                
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Calories");
+                NotifyOfPropertyChanged("Description");
+
             }
             get { return size; }
 
@@ -76,6 +89,14 @@ namespace DinoDiner.Menu
         public override string ToString()
         {
             return (this.size + " Triceritots");
+        }
+        /// <summary>
+        /// Provides a description of the Drink
+        /// </summary>
+        public string Description
+        {
+            get { return this.ToString(); }
+
         }
 
     }

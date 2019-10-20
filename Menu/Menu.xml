@@ -62,6 +62,12 @@
             Base class to add drinks to the menu that uses the interface IMenuItem
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Drink.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
         <member name="F:DinoDiner.Menu.Drink.ingredients">
             <summary>
             variable to hold ingredients in
@@ -97,10 +103,31 @@
             Holds the size of the drink
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Drink.Description">
+            <summary>
+            Desription of the Drink
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Drink.Special">
+            <summary>
+            special instructions for the item
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.JurrasicJava">
             <summary>
             Creates a Jurrasic class to add tea to the menu
             </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.JurrasicJava.PropertyChanged">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.JurrasicJava.NotifyPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="F:DinoDiner.Menu.JurrasicJava.RoomForCream">
             <summary>
@@ -148,10 +175,26 @@
             </summary>
             <returns>Name of Drink</returns>
         </member>
+        <member name="P:DinoDiner.Menu.JurrasicJava.Description">
+            <summary>
+            Provides a description of the Drink
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.JurrasicJava.Special">
+            <summary>
+            gets special instructions 
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Sodasaurus">
             <summary>
             Creates a class to hold a generic soda for the menu
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Sodasaurus.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="M:DinoDiner.Menu.Sodasaurus.#ctor">
             <summary>
@@ -183,6 +226,11 @@
             Overrides ToString to return the name of the drink as we want it
             </summary>
             <returns>Name of Drink</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.Sodasaurus.Description">
+            <summary>
+            Provides a description of the Drink
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.SodasaurusFlavor">
             <summary>
@@ -229,6 +277,12 @@
             Creates a Tyrannotea class to add tea to the menu
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Tyrannotea.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
         <member name="F:DinoDiner.Menu.Tyrannotea.Sweet">
             <summary>
             Holds if the customer wants sweet tea or not
@@ -272,10 +326,26 @@
             </summary>
             <returns>Name of Drink</returns>
         </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Description">
+            <summary>
+            Provides a description of the Drink
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Tyrannotea.Special">
+            <summary>
+            gets special instructions 
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Water">
             <summary>
             Creates a Water class to add water to the menu
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Water.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="F:DinoDiner.Menu.Water.Lemon">
             <summary>
@@ -310,10 +380,26 @@
             </summary>
             <returns>Name of Drink</returns>
         </member>
+        <member name="P:DinoDiner.Menu.Water.Description">
+            <summary>
+            Provides a description of the Drink
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Water.Special">
+            <summary>
+            gets special instructions 
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Brontowurst">
             <summary>
             Defines a class to add a brontowurst as an entree to the menu
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Brontowurst.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="P:DinoDiner.Menu.Brontowurst.Ingredients">
             <summary>
@@ -347,6 +433,16 @@
             </summary>
             <returns>Name of entree item as type string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.Brontowurst.Description">
+            <summary>
+            gets a description of the order item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Brontowurst.Special">
+            <summary>
+            gets special instructions for making the sandwich
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.DinoNuggets">
             <summary>
             Adds Dino nuggets to the menu as an entree
@@ -356,6 +452,12 @@
             <summary>
             keeps track of the total number of nuggets 
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.DinoNuggets.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="P:DinoDiner.Menu.DinoNuggets.Ingredients">
             <summary>
@@ -378,6 +480,16 @@
             the name of the entree item with proper formatting
             </summary>
             <returns>Name of entree item as type string</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.DinoNuggets.Description">
+            <summary>
+            gets a description of the order item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.DinoNuggets.Special">
+            <summary>
+            gets special instructions if extra nuggets are added
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.Entree">
             <summary>
@@ -404,6 +516,16 @@
         <member name="P:DinoDiner.Menu.Entree.Ingredients">
             <summary>
             Gets the ingredients list
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entree.Description">
+            <summary>
+            Desription of the entree
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Entree.Special">
+            <summary>
+            special instructions for the item
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.PrehistoricPBJ">
@@ -464,6 +586,12 @@
             Adds Pterodactyl wings and an entree
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.PterodactylWings.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
         <member name="P:DinoDiner.Menu.PterodactylWings.Ingredients">
             <summary>
             Creates list of immutable ingredients
@@ -482,10 +610,21 @@
             </summary>
             <returns>Name of entree item as type string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.PterodactylWings.Description">
+            <summary>
+            returns a description of the entree
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.SteakosaurusBurger">
             <summary>
             Adds Steakosaurus Burger to the menu as an entree
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.SteakosaurusBurger.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="F:DinoDiner.Menu.SteakosaurusBurger.bun">
             <summary>
@@ -529,9 +668,30 @@
             </summary>
             <returns>Name of entree item as type string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Description">
+            <summary>
+            Provides a description of the entree
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.SteakosaurusBurger.Special">
+            <summary>
+            gets special instructions if extra nuggets are added
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.TRexKingBurger">
             <summary>
             Adds TRex King Burger to menu as an entree
+            </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.TRexKingBurger.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Special">
+            <summary>
+            gets special instructions 
             </summary>
         </member>
         <member name="F:DinoDiner.Menu.TRexKingBurger.bun">
@@ -596,10 +756,21 @@
             </summary>
             <returns>Name of entree item as type string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.TRexKingBurger.Description">
+            <summary>
+            Provides a description of the entree
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.VelociWrap">
             <summary>
             Adds veloci wrap to menu as an entree
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.VelociWrap.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="F:DinoDiner.Menu.VelociWrap.dressing">
             <summary>
@@ -638,6 +809,11 @@
             </summary>
             <returns>Name of entree item as type string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.VelociWrap.Special">
+            <summary>
+            gets special instructions for making the sandwich
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.IMenuItem">
             <summary>
             Interface to allow the Entrees, Sides, and Drinks
@@ -657,6 +833,26 @@
         <member name="P:DinoDiner.Menu.IMenuItem.Ingredients">
             <summary>
             ingredients of the item
+            </summary>
+        </member>
+        <member name="T:DinoDiner.Menu.IOrderItem">
+            <summary>
+            Allows us to easily access ordered items properties in the gui
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Price">
+            <summary>
+            price of the item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Description">
+            <summary>
+            description of the item
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.IOrderItem.Special">
+            <summary>
+            special instructions for the item
             </summary>
         </member>
         <member name="T:DinoDiner.Menu.Menu">
@@ -696,6 +892,12 @@
             Adds Fries to the menu as a side
             </summary>
         </member>
+        <member name="M:DinoDiner.Menu.Fryceritops.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
+        </member>
         <member name="F:DinoDiner.Menu.Fryceritops.size">
             <summary>
             Variable to hold the size ordered
@@ -719,10 +921,21 @@
             </summary>
             <returns>Name of side item as type string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.Fryceritops.Description">
+            <summary>
+            Provides a description of the Drink
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.MeteorMacAndCheese">
             <summary>
             Adds Meteor Mac and Cheese to the menu as a side
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.MeteorMacAndCheese.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="F:DinoDiner.Menu.MeteorMacAndCheese.size">
             <summary>
@@ -752,10 +965,21 @@
             </summary>
             <returns>Name of side item as type string</returns>
         </member>
+        <member name="P:DinoDiner.Menu.MeteorMacAndCheese.Description">
+            <summary>
+            Provides a description of the Drink
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.MezzorellaSticks">
             <summary>
             Adds Mezzorella sticks to the menu as a side
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.MezzorellaSticks.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="F:DinoDiner.Menu.MezzorellaSticks.size">
             <summary>
@@ -784,6 +1008,11 @@
             the name of the side item with proper formatting
             </summary>
             <returns>Name of side item as type string</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.MezzorellaSticks.Description">
+            <summary>
+            Provides a description of the Drink
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.Side">
             <summary>
@@ -815,10 +1044,26 @@
             Gets or sets the size
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Side.Description">
+            <summary>
+            Desription of the side
+            </summary>
+        </member>
+        <member name="P:DinoDiner.Menu.Side.Special">
+            <summary>
+            special instructions for the item
+            </summary>
+        </member>
         <member name="T:DinoDiner.Menu.Triceritots">
             <summary>
             Class to add Triceritots to the menu
             </summary>
+        </member>
+        <member name="M:DinoDiner.Menu.Triceritots.NotifyOfPropertyChanged(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="propertyName"></param>
         </member>
         <member name="F:DinoDiner.Menu.Triceritots.size">
             <summary>
@@ -847,6 +1092,11 @@
             the name of the side item with proper formatting
             </summary>
             <returns>Name of side item as type string</returns>
+        </member>
+        <member name="P:DinoDiner.Menu.Triceritots.Description">
+            <summary>
+            Provides a description of the Drink
+            </summary>
         </member>
         <member name="T:DinoDiner.Menu.Size">
             <summary>

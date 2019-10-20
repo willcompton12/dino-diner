@@ -23,6 +23,27 @@ namespace DinoDiner.Menu
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
         /// <summary>
+        /// gets special instructions 
+        /// </summary>
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!bun) special.Add("Hold Bun");
+                if (!lettuce) special.Add("Hold Lettuce");
+                if (!tomato) special.Add("Hold Tomato");
+                if (!onion) special.Add("Hold Onion");
+                if (!pickle) special.Add("Hold Pickle");
+                if (!ketchup) special.Add("Hold Ketchup");
+                if (!mustard) special.Add("Hold Mustard");
+                if (!mayo) special.Add("Hold Mayo");
+                return special.ToArray();
+            }
+            
+           
+        }
+        /// <summary>
         /// private boolean values to hold if the customer wants the respective ingredients
         /// </summary>
         private bool bun = true;
@@ -150,24 +171,6 @@ namespace DinoDiner.Menu
             get { return this.ToString(); }
 
         }
-        /// <summary>
-        /// gets special instructions if extra nuggets are added
-        /// </summary>
-        public string[] Special
-        {
-            get
-            {
-                List<string> special = new List<string>();
-                if (!bun) special.Add("Hold Bun");
-                if (!lettuce) special.Add("Hold Lettuce");
-                if (!tomato) special.Add("Hold Tomato");
-                if (!onion) special.Add("Hold Onion");
-                if (!pickle) special.Add("Hold Pickle");
-                if (!ketchup) special.Add("Hold Ketchup");
-                if (!mustard) special.Add("Hole Mustard");
-                if (!mayo) special.Add("Hold Mayo");
-                return special.ToArray();
-            }
-        }
+       
     }
 }

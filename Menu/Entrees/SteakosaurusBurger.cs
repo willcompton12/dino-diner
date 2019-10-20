@@ -120,7 +120,7 @@ namespace DinoDiner.Menu
                 if (!bun) special.Add("Hold Bun");
                 if (!pickle) special.Add("Hold Pickle");
                 if (!ketchup) special.Add("Hold Ketchup");
-                if (!mustard) special.Add("Hole Mustard");
+                if (!mustard) special.Add("Hold Mustard");
                 return special.ToArray();
             }
         }

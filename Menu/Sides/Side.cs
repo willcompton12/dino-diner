@@ -36,7 +36,7 @@ namespace DinoDiner.Menu
         /// </summary>
         public virtual Size Size { get; set; }
         /// <summary>
-        /// Desription of the entree
+        /// Desription of the side
         /// </summary>
         public string Description { get; }
         /// <summary>
