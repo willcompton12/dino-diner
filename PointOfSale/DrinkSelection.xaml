@@ -58,7 +58,7 @@
                         <TextBlock HorizontalAlignment="Center" Text="Sodasaurus" Height="17"/>
                     </StackPanel>
                 </Button>
-                <Button Background="White" Grid.Row="0" Grid.Column="1"  Click="TyrannoteaClick">
+                <Button  x:Name="chxTyrannotea" Background="White" Grid.Row="0" Grid.Column="1"  Click="TyrannoteaClick">
                     <StackPanel>
                         <Image Width="80" Source="Assets/DinoDiner-12.png"/>
                         <TextBlock HorizontalAlignment="Center" Text="Tyrannotea" Height="17"/>

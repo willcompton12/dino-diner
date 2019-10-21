@@ -31,47 +31,47 @@
                 
 
                 <StackPanel>
-                    <Image Width="80" Source="Assets/DinoDiner-01.png"/>
+                    <Image Width="80" Source="Assets/DinoDiner-16.png"/>
                     <TextBlock Text="Brontowurst Combo"/>
                 </StackPanel>
             </Button>
             <Button  Click="Nugged" Grid.Row="0" Grid.Column="1" Background="White">
                 <StackPanel>
-                    <Image  Height ="70" Width="80" Source="Assets/DinoDiner-02.png"/>
+                    <Image  Height ="70" Width="80" Source="Assets/DinoDiner-17.png"/>
                     <TextBlock Text="Dino-Nuggets"/>
                 </StackPanel>
             </Button>
             <Button Click="Steako" Grid.Row="0" Grid.Column="2" Background="White">
                 <StackPanel>
 
-                    <Image Height="70" Width="80" Source="Assets/DinoDiner-05.png"/>
+                    <Image Height="70" Width="80" Source="Assets/DinoDiner-20.png"/>
                     <TextBlock Text="Steakosaurus Burger"/>
                     <TextBlock Text="Combo" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
             <Button Click="King" Grid.Row="1" Background="White">
                 <StackPanel>
-                    <Image Width="70" Source="Assets/DinoDiner-06.png"/>
+                    <Image Width="70" Source="Assets/DinoDiner-21.png"/>
                     <TextBlock Text="T-Rex King Burger"/>
                     <TextBlock Text="Combo" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
             <Button Click="PBJ" Grid.Row="1" Grid.Column="1" Background="White">
                 <StackPanel>
-                    <Image Width="80" Source="Assets/DinoDiner-03.png"/>
+                    <Image Width="80" Source="Assets/DinoDiner-18.png"/>
                     <TextBlock Text="Prehistroric PB&amp;J Combo"/>
                 </StackPanel>
             </Button>
             <Button Click="Wings" Grid.Row="1" Grid.Column="2" Background="White">
                 <StackPanel>
-                    <Image Width="70" Source="Assets/DinoDiner-04.png"/>
+                    <Image Width="70" Source="Assets/DinoDiner-19.png"/>
                     <TextBlock Text="Pterodactyl Wings"/>
                     <TextBlock Text="Combo" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
             <Button Click="Wrapped" Grid.Row="2" Grid.Column="1" Background="White">
                 <StackPanel>
-                    <Image Width="80" Source="Assets/DinoDiner-07.png"/>
+                    <Image Width="80" Source="Assets/DinoDiner-22.png"/>
                     <TextBlock Text="Veloci-Wrap Combo"/>
 
                 </StackPanel>

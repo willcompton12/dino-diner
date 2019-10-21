@@ -493,9 +493,14 @@
             special instructions for the item
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Entree.PropertyChanged">
+            <summary>
+            Event for Property Changed
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Entree.NotifyOfPropertyChanged(System.String)">
             <summary>
-            
+             Event Handler for when a property is changed
             </summary>
             <param name="propertyName"></param>
         </member>
@@ -980,6 +985,11 @@
         <member name="T:DinoDiner.Menu.Side">
             <summary>
             Base class for side items that uses the IMenuItem interface to add the sides to the menu
+            </summary>
+        </member>
+        <member name="E:DinoDiner.Menu.Side.PropertyChanged">
+            <summary>
+            Event for PropertyChanged
             </summary>
         </member>
         <member name="M:DinoDiner.Menu.Side.NotifyOfPropertyChanged(System.String)">

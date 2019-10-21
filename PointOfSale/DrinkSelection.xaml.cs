@@ -51,7 +51,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void TyrannoteaClick(object sender, RoutedEventArgs e)
         {
-
+            
             chxFlavor.IsEnabled = false;
             chxSpecialty.IsEnabled = true;
             chxSpecialty.Content = "Sweet";
