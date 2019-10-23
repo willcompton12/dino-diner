@@ -12,6 +12,9 @@ namespace DinoDiner.Menu
     /// </summary>
     public abstract class Drink : IMenuItem , INotifyPropertyChanged
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Event Hnadler for when a property is changed

@@ -27,27 +27,27 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <Button Background="White" Grid.Row="0">
+                <Button Background="White" Grid.Row="0" Click="FriesClicked">
                     <StackPanel>
                         <Image Width="80" Source="Assets/DinoDiner-08.png"/>
                         <TextBlock HorizontalAlignment="Center" Text="Fryceritops" Height="17"/>
                     </StackPanel>
                 </Button>
-                <Button Background="White" Grid.Row="0" Grid.Column="1" >
+                <Button Background="White" Grid.Row="0" Grid.Column="1" Click="MacClicked" >
                     <StackPanel>
                         <Image Width="80" Source="Assets/DinoDiner-09.png"/>
                         <TextBlock HorizontalAlignment="Center" Text="Meteor Mac" Height="17"/>
                         <TextBlock HorizontalAlignment="Center" Text="&amp; Cheese" />
                     </StackPanel>
                 </Button>
-                <Button Background="White" Grid.Row="1">
+                <Button Background="White" Grid.Row="1" Click="MezzorellaClicked">
                     <StackPanel>
                         <Image Width="80" Source="Assets/DinoDiner-10.png"/>
                         <TextBlock HorizontalAlignment="Center" Text="Mezzorella" Height="17"/>
                         <TextBlock HorizontalAlignment="Center" Text="Sticks" />
                     </StackPanel>
                 </Button>
-                <Button Background="White" Grid.Row="1" Grid.Column="1">
+                <Button Background="White" Grid.Row="1" Grid.Column="1" Click="TotsClicked">
                     <StackPanel>
                         <Image Width="80" Source="Assets/DinoDiner-11.png"/>
                         <TextBlock HorizontalAlignment="Center" Text="Triceritots" Height="17"/>
@@ -56,9 +56,9 @@
             </Grid>
             <TextBlock FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Side" RenderTransformOrigin="1.675,0.605" Width="32" Margin="58,41,0,0" Height="20"/>
             <TextBlock FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Size" RenderTransformOrigin="1.675,0.605" Width="32" Margin="224,41,0,0" Height="20"/>
-            <RadioButton x:Name="chx_Small" FontSize="18" Content="Small" HorizontalAlignment="Left" Margin="208,109,0,0" VerticalAlignment="Top"/>
-            <RadioButton x:Name="chxMedium" FontSize="18" Content="Medium" HorizontalAlignment="Left" Margin="207,155,0,163"/>
-            <RadioButton x:Name="chxLarge" FontSize="18" Content="Large" HorizontalAlignment="Left" Margin="207,201,0,108" RenderTransformOrigin="0.445,3.889"/>
+            <RadioButton x:Name="chx_Small" FontSize="18" Content="Small" HorizontalAlignment="Left" Margin="208,109,0,0" VerticalAlignment="Top" Click="OnChangedSize" Tag="Small"/>
+            <RadioButton x:Name="chxMedium" FontSize="18" Content="Medium" HorizontalAlignment="Left" Margin="207,155,0,163" Click="OnChangedSize" Tag="Medium"/>
+            <RadioButton x:Name="chxLarge" FontSize="18" Content="Large" HorizontalAlignment="Left" Margin="207,201,0,108" RenderTransformOrigin="0.445,3.889" Click="OnChangedSize" Tag="Large"/>
         </Grid>
     </Grid>
 </Page>

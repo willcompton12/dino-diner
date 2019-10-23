@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DinoDiner.Menu;
+using DDSize = DinoDiner.Menu.Size;
 
 namespace PointOfSale
 {
@@ -20,6 +22,7 @@ namespace PointOfSale
     /// </summary>
     public partial class DrinkSelection : Page
     {
+        private Drink drink { get; set; }
         /// <summary>
         /// Sets up xaml file for the drink selection page
         /// </summary>
@@ -35,7 +38,11 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SodaClick(object sender, RoutedEventArgs e)
         {
-            
+            if (DataContext is Order order)
+            {
+                drink = new Sodasaurus();
+                order.Items.Add(drink);
+            }
             chxFlavor.IsEnabled = false;
             chxSpecialty.IsEnabled = false;
             chxHoldIce.IsEnabled = false;
@@ -51,7 +58,11 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void TyrannoteaClick(object sender, RoutedEventArgs e)
         {
-            
+            if (DataContext is Order order)
+            {
+                drink = new Tyrannotea();
+                order.Items.Add(drink);
+            }
             chxFlavor.IsEnabled = false;
             chxSpecialty.IsEnabled = true;
             chxSpecialty.Content = "Sweet";
@@ -65,6 +76,11 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void jurrasicJavaClick(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                drink = new JurrasicJava();
+                order.Items.Add(drink);
+            }
             chxFlavor.IsEnabled = false;
             chxSpecialty.IsEnabled = false;
             chxHoldIce.IsEnabled = false;
@@ -81,6 +97,11 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void WaterClick(object sender, RoutedEventArgs e)
         {
+            if (DataContext is Order order)
+            {
+                drink = new Water();
+                order.Items.Add(drink);
+            }
             chxFlavor.IsEnabled = false;
             chxSpecialty.IsEnabled = false;
             chxHoldIce.IsEnabled = false;
@@ -95,6 +116,14 @@ namespace PointOfSale
         private void FlavorClick(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new FlavorSelection());
+        }
+
+        private void OnChangedSize(object sender, RoutedEventArgs args)
+        {
+            if (sender is FrameworkElement element)
+            {
+                drink.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString());
+            }
         }
     }
 }

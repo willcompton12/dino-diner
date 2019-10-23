@@ -62,6 +62,11 @@
             Base class to add drinks to the menu that uses the interface IMenuItem
             </summary>
         </member>
+        <member name="E:DinoDiner.Menu.Drink.PropertyChanged">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:DinoDiner.Menu.Drink.NotifyOfPropertyChanged(System.String)">
             <summary>
             Event Hnadler for when a property is changed

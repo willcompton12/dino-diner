@@ -64,20 +64,27 @@ namespace DinoDiner.Menu
                 {
                     Price = 1.50;
                     Calories = 112;
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
+                    NotifyOfPropertyChanged("Description");
                 }
                     if( size == Size.Medium)
                 {
                     Price = 2.00;
                     Calories = 156;
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
+                    NotifyOfPropertyChanged("Description");
                 }
                     if(size == Size.Large)
                 {
                     Price = 2.50;
                     Calories = 208;
+                    NotifyOfPropertyChanged("Price");
+                    NotifyOfPropertyChanged("Calories");
+                    NotifyOfPropertyChanged("Description");
                 }
 
-                NotifyOfPropertyChanged("Price");
-                NotifyOfPropertyChanged("Calories");
             }
         }
         /// <summary>

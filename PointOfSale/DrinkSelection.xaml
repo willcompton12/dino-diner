@@ -79,9 +79,9 @@
             </Grid>
             <TextBlock FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Drink" RenderTransformOrigin="1.675,0.605" Width="32" Margin="58,41,0,0" Height="20"/>
             <TextBlock FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Text="Size" RenderTransformOrigin="1.675,0.605" Width="32" Margin="224,41,0,0" Height="20"/>
-            <RadioButton x:Name="chx_Small" FontSize="18" Content="Small" HorizontalAlignment="Left" Margin="208,109,0,0" VerticalAlignment="Top"/>
-            <RadioButton x:Name="chxMedium" FontSize="18" Content="Medium" HorizontalAlignment="Left" Margin="207,155,0,163"/>
-            <RadioButton x:Name="chxLarge" FontSize="18" Content="Large" HorizontalAlignment="Left" Margin="207,201,0,108" RenderTransformOrigin="0.445,3.889"/>
+            <RadioButton x:Name="chx_Small" FontSize="18" Content="Small" HorizontalAlignment="Left" Margin="208,109,0,0" VerticalAlignment="Top" Click="OnChangedSize" Tag="Small"/>
+            <RadioButton x:Name="chxMedium" FontSize="18" Content="Medium" HorizontalAlignment="Left" Margin="207,155,0,163" Click="OnChangedSize" Tag="Medium"/>
+            <RadioButton x:Name="chxLarge" FontSize="18" Content="Large" HorizontalAlignment="Left" Margin="207,201,0,108" RenderTransformOrigin="0.445,3.889" Click="OnChangedSize" Tag="Large"/>
         </Grid>
     </Grid>
 </Page>
