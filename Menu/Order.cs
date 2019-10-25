@@ -2,21 +2,27 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
     /// <summary>
     /// Class to keep track of order
     /// </summary>
-    public class Order 
+    public class Order : INotifyPropertyChanged
     {
+        
         /// <summary>
         /// List of items ordered
         /// </summary>
-        public ObservableCollection<IOrderItem> Items { get; set; } = new ObservableCollection<IOrderItem>();
+        private List<IOrderItem> items;
         /// <summary>
         /// Cost of the items without tax
         /// </summary>
+        public IOrderItem[] Items
+        {
+            get { return items.ToArray(); }
+        }
         public double SubtotalCost
         {
             get
@@ -54,6 +60,36 @@ namespace DinoDiner.Menu
                 double final = 0.00;
                 return final + SubtotalCost + SalesTaxCost;
             }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void Add(IOrderItem item)
+        {
+            item.PropertyChanged += OnCollectionChanged;
+            items.Add(item);
+            OnCollectionChanged(this, new EventArgs());
+        }
+
+        public void Remove(IOrderItem item)
+        {
+            item.PropertyChanged += OnCollectionChanged;
+            items.Remove(item);
+            OnCollectionChanged(this, new EventArgs());
+        }
+
+
+        private void OnCollectionChanged(object sender, EventArgs args)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("Items"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SubtotalCost"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("SalesTaxCost"));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs("TotalCost"));
+        }
+
+        public  Order()
+        {
+            items = new List<IOrderItem>();
         }
     }
 }

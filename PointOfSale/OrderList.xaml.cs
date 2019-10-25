@@ -21,11 +21,34 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderList : UserControl
     {
+        public NavigationService NavigationService { get; set; }
         public OrderList()
         {
             InitializeComponent();
         }
 
-     
+        public void OnRemoveItem(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                if (sender is FrameworkElement element)
+                {
+                    if (element.DataContext is IOrderItem item)
+                    {
+                        order.Remove(item);
+                    }
+                }
+            }
+        }
+
+        private void OnSelectionChanged(object sender, SelectionChangedEventArgs args)
+        {
+           if( OrderControl.SelectedItem is Side side)
+            {
+                NavigationService.Navigate(new SideSelection());
+            }
+        }
+
+
     }
 }

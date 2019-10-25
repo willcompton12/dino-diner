@@ -19,13 +19,20 @@
         </Grid.ColumnDefinitions>
         <TextBlock Text="Order" Grid.Row="0" Grid.Column="0" FontWeight="Bold" TextAlignment="Right"/>
         <TextBlock Text="#" FontWeight="Bold" Grid.Column="1" Margin="5,0,0,0"/>
-        <ListBox Grid.Row="1" 
+        <ListBox Name="OrderControl" Grid.Row="1" 
                  Grid.ColumnSpan="2" 
                  ItemsSource="{Binding Path=Items}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text="{Binding Path=Description}"/>
+                    <StackPanel MinWidth="190">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="15"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Path=Description}"/>
+                            <Button Grid.Column="1"  Click="OnRemoveItem" Background="Red">X</Button>
+                        </Grid> 
                         <ListBox BorderBrush="White" ItemsSource="{Binding Path=Special}"/>
                     </StackPanel>
                 </DataTemplate>

@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Allows us to easily access ordered items properties in the gui
     /// </summary>
-    public interface IOrderItem
+    public interface IOrderItem : INotifyPropertyChanged
     {
         /// <summary>
         /// price of the item

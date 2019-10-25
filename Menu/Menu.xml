@@ -838,12 +838,12 @@
             Class to keep track of order
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Order.Items">
+        <member name="F:DinoDiner.Menu.Order.items">
             <summary>
             List of items ordered
             </summary>
         </member>
-        <member name="P:DinoDiner.Menu.Order.SubtotalCost">
+        <member name="P:DinoDiner.Menu.Order.Items">
             <summary>
             Cost of the items without tax
             </summary>
