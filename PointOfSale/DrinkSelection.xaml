@@ -34,7 +34,7 @@
                         <TextBlock FontSize="16" Text="Decaf" HorizontalAlignment="Center"/>
 
                     </StackPanel></Button>
-                <Button x:Name="chxLemon" FontSize="16" Grid.Row="2" Content="Add Lemon" IsEnabled="False"/>
+                <Button x:Name="chxLemon" FontSize="16" Grid.Row="2" Content="Add Lemon" IsEnabled="False" Click="OnLemon"/>
                 <Button x:Name="chxHoldIce" FontSize="16" Grid.Row="3" Content="Hold Ice" IsEnabled="False"/>
             </Grid>
             <Grid Margin="-24,65,295,23">
