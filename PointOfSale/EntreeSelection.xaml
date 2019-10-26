@@ -28,7 +28,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" Background="White" RenderTransformOrigin="0.5,0.5">
+            <Button x:Name="uxBrontowurst" Grid.Row="0" Grid.Column="0" Background="White" RenderTransformOrigin="0.5,0.5" Click="OnBrontowurst">
 
 
                 <StackPanel>
@@ -36,38 +36,38 @@
                     <TextBlock Text="Brontowurst"/>
                 </StackPanel>
             </Button>
-            <Button  Grid.Row="0" Grid.Column="1" Background="White">
+            <Button x:Name="uxDinoNuggets"  Grid.Row="0" Grid.Column="1" Background="White" Click="OnDinoNuggets">
                 <StackPanel>
                     <Image  Height ="70" Width="80" Source="Assets/DinoDiner-02.png"/>
                     <TextBlock Text="Dino-Nuggets"/>
                 </StackPanel>
             </Button>
-            <Button Grid.Row="0" Grid.Column="2" Background="White">
+            <Button x:Name="uxSteakosaurus" Grid.Row="0" Grid.Column="2" Background="White" Click="OnSteakosaurus">
                 <StackPanel>
 
                     <Image Height="70" Width="80" Source="Assets/DinoDiner-05.png"/>
                     <TextBlock Text="Steakosaurus Burger"/>
                 </StackPanel>
             </Button>
-            <Button Grid.Row="1" Background="White">
+            <Button x:Name="uxTRex"  Grid.Row="1" Background="White" Click="OnTRex">
                 <StackPanel>
                     <Image Width="70" Source="Assets/DinoDiner-06.png"/>
                     <TextBlock Text="T-Rex King Burger"/>
                 </StackPanel>
             </Button>
-            <Button Grid.Row="1" Grid.Column="1" Background="White">
+            <Button x:Name="uxPBJ" Grid.Row="1" Grid.Column="1" Background="White" Click="OnPBJ">
                 <StackPanel>
                     <Image Width="80" Source="Assets/DinoDiner-03.png"/>
                     <TextBlock Text="Prehistroric PB&amp;J"/>
                 </StackPanel>
             </Button>
-            <Button  Grid.Row="1" Grid.Column="2" Background="White">
+            <Button x:Name="uxWings" Grid.Row="1" Grid.Column="2" Background="White" Click="OnWings">
                 <StackPanel>
-                    <Image Width="70" Source="Assets/DinoDiner-04.png"/>
+                    <Image  Width="70" Source="Assets/DinoDiner-04.png"/>
                     <TextBlock Text="Pterodactyl Wings"/>
                 </StackPanel>
             </Button>
-            <Button Grid.Row="2" Grid.Column="1" Background="White">
+            <Button x:Name="uxVelociWrap" Grid.Row="2" Grid.Column="1" Background="White" Click="OnWrap">
                 <StackPanel>
                     <Image Width="80" Source="Assets/DinoDiner-07.png"/>
                     <TextBlock Text="Veloci-Wrap"/>
