@@ -125,5 +125,6 @@ namespace PointOfSale
                 drink.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString());
             }
         }
+     
     }
 }
