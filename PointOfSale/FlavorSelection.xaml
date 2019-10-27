@@ -31,22 +31,22 @@
             <Button Grid.Row="0" Grid.Column="0" Background="White" RenderTransformOrigin="0.5,0.5" Click="OnCherry">
                 Cherry
             </Button>
-            <Button  Grid.Row="0" Grid.Column="1" Background="White" >
+            <Button  Grid.Row="0" Grid.Column="1" Background="White" Click="OnChocolate">
                 Chocolate
             </Button>
-            <Button  Grid.Row="0" Grid.Column="2" Background="White">
+            <Button  Grid.Row="0" Grid.Column="2" Background="White" Click="OnCola">
                 Cola
             </Button>
-            <Button Grid.Row="1" Background="White">
+            <Button Grid.Row="1" Background="White" Click="OnLime">
                 Lime
             </Button>
-            <Button Grid.Row="1" Grid.Column="1" Background="White" >
+            <Button Grid.Row="1" Grid.Column="1" Background="White" Click="OnOrange">
                 Orange
             </Button>
-            <Button Grid.Row="1" Grid.Column="2" Background="White">
+            <Button Grid.Row="1" Grid.Column="2" Background="White" Click="OnRootbeer">
                 Root Beer
             </Button>
-            <Button Grid.Row="2" Grid.Column="1" Background="White">
+            <Button Grid.Row="2" Grid.Column="1" Background="White" Click="OnVanilla">
                 Vanilla
             </Button>
         </Grid>

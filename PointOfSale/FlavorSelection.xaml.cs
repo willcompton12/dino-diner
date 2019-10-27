@@ -30,12 +30,78 @@ namespace PointOfSale
             InitializeComponent();
             drink = input;
         }
-
+        /// <summary>
+        /// Event Handler to change the flavor to cherry
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnCherry(object sender, RoutedEventArgs args)
         {
             drink.Flavor = SodasaurusFlavor.Cherry;
+            NavigationService.Navigate(new DrinkSelection());
         }
 
-       
+        /// <summary>
+        /// Event Handler to change the flavor to chocolate
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnChocolate(object sender, RoutedEventArgs args)
+        {
+            drink.Flavor = SodasaurusFlavor.Chocolate;
+            NavigationService.Navigate(new DrinkSelection());
+        }
+        /// <summary>
+        /// Event Handler to change the flavor to cola
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnCola(object sender, RoutedEventArgs args)
+        {
+            drink.Flavor = SodasaurusFlavor.Cola;
+            NavigationService.Navigate(new DrinkSelection());
+        }
+        /// <summary>
+        /// Event Handler to change the flavor to lime
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnLime(object sender, RoutedEventArgs args)
+        {
+            drink.Flavor = SodasaurusFlavor.Lime;
+            NavigationService.Navigate(new DrinkSelection());
+        }
+        /// <summary>
+        /// Event Handler to change the flavor to orange
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnOrange(object sender, RoutedEventArgs args)
+        {
+            drink.Flavor = SodasaurusFlavor.Orange;
+            NavigationService.Navigate(new DrinkSelection());
+        }
+        /// <summary>
+        /// Event Handler to change the flavor to rootbeer
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnRootbeer(object sender, RoutedEventArgs args)
+        {
+            drink.Flavor = SodasaurusFlavor.RootBeer;
+            NavigationService.Navigate(new DrinkSelection());
+        }
+        /// <summary>
+        /// Event Handler to change the flavor to vanilla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnVanilla(object sender, RoutedEventArgs args)
+        {
+            drink.Flavor = SodasaurusFlavor.Vanilla;
+            NavigationService.Navigate(new DrinkSelection());
+        }
+
+
     }
 }
