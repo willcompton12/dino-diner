@@ -50,6 +50,7 @@ namespace PointOfSale
             chxLemon.IsEnabled = false;
             chxFlavor.IsEnabled = true;
             chxHoldIce.IsEnabled = true;
+            chxDone.IsEnabled = true;
         }
 
         /// <summary>
@@ -70,6 +71,7 @@ namespace PointOfSale
             chxSpecialty.Content = "Sweet";
             chxHoldIce.IsEnabled = true;
             chxLemon.IsEnabled = true;
+            chxDone.IsEnabled = true;
         }
         /// <summary>
         /// Event handler for when the java button is clicked
@@ -91,6 +93,7 @@ namespace PointOfSale
             chxSpecialty.Content = "Decaf";
             chxHoldIce.IsEnabled = true;
             chxHoldIce.Content = "Add Ice";
+            chxDone.IsEnabled = true;
         }
         /// <summary>
         /// Event handler for when the Water button is clicked
@@ -110,6 +113,7 @@ namespace PointOfSale
             chxHoldIce.IsEnabled = false;
             chxLemon.IsEnabled = true;
             chxHoldIce.IsEnabled = true;
+            chxDone.IsEnabled = true;
         }
         /// <summary>
         /// Event handler for when the Flavor button is clicked
@@ -178,6 +182,15 @@ namespace PointOfSale
             {
                 java.MakeDecaf();
             }
+        }
+        /// <summary>
+        /// Event handler to finish the drink selection and return to the start
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnDone(object sender, RoutedEventArgs args)
+        {
+            NavigationService.Navigate(new MenuCategorySelection());
         }
 
 
