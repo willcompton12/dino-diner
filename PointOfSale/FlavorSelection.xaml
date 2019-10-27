@@ -28,10 +28,10 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Grid.Row="0" Grid.Column="0" Background="White" RenderTransformOrigin="0.5,0.5">
+            <Button Grid.Row="0" Grid.Column="0" Background="White" RenderTransformOrigin="0.5,0.5" Click="OnCherry">
                 Cherry
             </Button>
-            <Button  Grid.Row="0" Grid.Column="1" Background="White">
+            <Button  Grid.Row="0" Grid.Column="1" Background="White" >
                 Chocolate
             </Button>
             <Button  Grid.Row="0" Grid.Column="2" Background="White">
@@ -40,7 +40,7 @@
             <Button Grid.Row="1" Background="White">
                 Lime
             </Button>
-            <Button Grid.Row="1" Grid.Column="1" Background="White">
+            <Button Grid.Row="1" Grid.Column="1" Background="White" >
                 Orange
             </Button>
             <Button Grid.Row="1" Grid.Column="2" Background="White">

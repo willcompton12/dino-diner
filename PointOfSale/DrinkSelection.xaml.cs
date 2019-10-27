@@ -43,6 +43,7 @@ namespace PointOfSale
                 drink = new Sodasaurus();
                 order.Add(drink);
             }
+            chxHoldIce.Content = "Hold Ice";
             chxFlavor.IsEnabled = false;
             chxSpecialty.IsEnabled = false;
             chxHoldIce.IsEnabled = false;
@@ -63,6 +64,7 @@ namespace PointOfSale
                 drink = new Tyrannotea();
                 order.Add(drink);
             }
+            chxHoldIce.Content = "Hold Ice";
             chxFlavor.IsEnabled = false;
             chxSpecialty.IsEnabled = true;
             chxSpecialty.Content = "Sweet";
@@ -102,6 +104,7 @@ namespace PointOfSale
                 drink = new Water();
                 order.Add(drink);
             }
+            chxHoldIce.Content = "Hold Ice";
             chxFlavor.IsEnabled = false;
             chxSpecialty.IsEnabled = false;
             chxHoldIce.IsEnabled = false;
@@ -115,9 +118,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void FlavorClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new FlavorSelection());
+            NavigationService.Navigate(new FlavorSelection((Sodasaurus)drink));
         }
-
+        /// <summary>
+        /// Event handler for when the size is changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnChangedSize(object sender, RoutedEventArgs args)
         {
             if (sender is FrameworkElement element)
@@ -125,7 +132,53 @@ namespace PointOfSale
                 drink.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString());
             }
         }
-     
+     /// <summary>
+     /// Event handler to add lemon to the order
+     /// </summary>
+     /// <param name="sender"></param>
+     /// <param name="args"></param>
+        private void OnLemon(object sender, RoutedEventArgs args)
+        {
+            if(drink is Water water)
+            {
+                water.AddLemon();
+            }
+            if(drink is Tyrannotea tea)
+            {
+              
+                tea.AddLemon();
+            }
+        }
+        /// <summary>
+        /// event handler to hold ice for drinks or add ice for java
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnHoldIce(object sender, RoutedEventArgs args)
+        {
+            drink.HoldIce();
+            if(drink is JurrasicJava java)
+                {
+                java.AddIce();
+            }
+        }
+        /// <summary>
+        /// Event handler to make the tea sweet or make the coffee decaf
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnSpecial(object sender, RoutedEventArgs args)
+        {
+            if(drink is Tyrannotea tea)
+            {
+                tea.MakeSweet();
+            }
+
+            if(drink is JurrasicJava java)
+            {
+                java.MakeDecaf();
+            }
+        }
 
 
     }

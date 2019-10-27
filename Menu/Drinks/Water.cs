@@ -45,12 +45,13 @@ namespace DinoDiner.Menu
         /// <summary>
         /// sets the price to the size and returns the size
         /// </summary>
-        public Size Size
+        public override Size Size
         {
             get { return size; }
             set
             {
                 size = value;
+                NotifyOfPropertyChanged("Description");
             }
         }
 
