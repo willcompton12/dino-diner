@@ -38,7 +38,7 @@ namespace PointOfSale
         private void OnCherry(object sender, RoutedEventArgs args)
         {
             drink.Flavor = SodasaurusFlavor.Cherry;
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.GoBack();
         }
 
         /// <summary>
@@ -49,7 +49,7 @@ namespace PointOfSale
         private void OnChocolate(object sender, RoutedEventArgs args)
         {
             drink.Flavor = SodasaurusFlavor.Chocolate;
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.GoBack();
         }
         /// <summary>
         /// Event Handler to change the flavor to cola
@@ -59,7 +59,7 @@ namespace PointOfSale
         private void OnCola(object sender, RoutedEventArgs args)
         {
             drink.Flavor = SodasaurusFlavor.Cola;
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.GoBack();
         }
         /// <summary>
         /// Event Handler to change the flavor to lime
@@ -69,7 +69,7 @@ namespace PointOfSale
         private void OnLime(object sender, RoutedEventArgs args)
         {
             drink.Flavor = SodasaurusFlavor.Lime;
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.GoBack();
         }
         /// <summary>
         /// Event Handler to change the flavor to orange
@@ -79,7 +79,7 @@ namespace PointOfSale
         private void OnOrange(object sender, RoutedEventArgs args)
         {
             drink.Flavor = SodasaurusFlavor.Orange;
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.GoBack();
         }
         /// <summary>
         /// Event Handler to change the flavor to rootbeer
@@ -89,7 +89,7 @@ namespace PointOfSale
         private void OnRootbeer(object sender, RoutedEventArgs args)
         {
             drink.Flavor = SodasaurusFlavor.RootBeer;
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.GoBack();
         }
         /// <summary>
         /// Event Handler to change the flavor to vanilla
@@ -99,7 +99,7 @@ namespace PointOfSale
         private void OnVanilla(object sender, RoutedEventArgs args)
         {
             drink.Flavor = SodasaurusFlavor.Vanilla;
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.GoBack();
         }
 
 
