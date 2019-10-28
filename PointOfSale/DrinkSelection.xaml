@@ -37,7 +37,7 @@
                     </StackPanel></Button>
                 <Button x:Name="chxLemon" FontSize="14" Grid.Row="2" Content="Add Lemon" IsEnabled="False" Click="OnLemon"/>
                 <Button x:Name="chxHoldIce" FontSize="14" Grid.Row="3" Content="Hold Ice" IsEnabled="False" Click="OnHoldIce"/>
-                <Button x:Name="chxDone" FontSize="14" Grid.Row="4" Content="Done" IsEnabled="False" Click="OnDone"/>
+                <Button x:Name="chxDone" FontSize="14" Grid.Row="4" Content="Done"  Click="OnDone"/>
             </Grid>
             <Grid Margin="-24,65,295,23">
                 <Grid.Resources>

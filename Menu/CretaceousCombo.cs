@@ -10,7 +10,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Class to allow customers to get a combo meal at a slightly cheaper price
     /// </summary>
-    public class CretaceousCombo : INotifyPropertyChanged
+    public class CretaceousCombo : INotifyPropertyChanged , IOrderItem
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -158,11 +158,13 @@ namespace DinoDiner.Menu
             {
                 List<string> special = new List<string>();
                 special.Add(Entree.Description);
+                
                 special.AddRange(Entree.Special);
                 special.Add(Side.Description);
                 special.AddRange(Side.Special);
                 special.Add(Drink.Description);
                 special.AddRange(Drink.Special);
+                
                 return special.ToArray();
             }
         }

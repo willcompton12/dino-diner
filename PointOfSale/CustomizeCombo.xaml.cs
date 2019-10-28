@@ -21,6 +21,7 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCombo : Page
     {
+        
         /// <summary>
         /// Creates the page to allow user to customize the combo
         /// </summary>
@@ -37,7 +38,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SelectDrink(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.Navigate(new DrinkSelection(2));
         }
         /// <summary>
         /// Event handler for when the side button is clicked
@@ -47,6 +48,13 @@ namespace PointOfSale
         private void SelectSide(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new SideSelection());
+        }
+
+        private void OnDone(object sender, RoutedEventArgs args)
+        {
+        
+                NavigationService.Navigate(new MenuCategorySelection());
+            
         }
     }
 }

@@ -100,6 +100,7 @@ namespace PointOfSale
                 entree = new PrehistoricPBJ();
                 order.Add(entree);
                 NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new CustomizePrehistoricPBJ(((PrehistoricPBJ)entree), 1));
             }
 
         }

@@ -11,6 +11,9 @@
     <Grid>
         <TextBlock FontSize="28" Text="Add to Order" VerticalAlignment="Top" HorizontalAlignment="Center"/>
         <Grid Margin="60,40,69,10">
+            <Grid Margin="337,281,0,0">
+                <Button FontSize="13" Click="OnDone">Done</Button>
+            </Grid>
             
             <Grid Margin="-24,65,295,23">
                 <Grid.Resources>

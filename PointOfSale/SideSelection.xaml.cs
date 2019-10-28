@@ -22,6 +22,7 @@ namespace PointOfSale
     /// </summary>
     public partial class SideSelection : Page
     {
+
         private Side side { get; set; }
         /// <summary>
         /// Creates page to allow the user to select the side
@@ -73,6 +74,11 @@ namespace PointOfSale
             {
                side.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString()) ;
             }
+        }
+
+        private void OnDone(object sender, RoutedEventArgs args)
+        {
+            NavigationService.GoBack();
         }
 
     }

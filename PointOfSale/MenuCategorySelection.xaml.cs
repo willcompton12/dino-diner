@@ -43,7 +43,7 @@ namespace PointOfSale
         /// <param name="args"></param>
         void Drinks(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.Navigate(new DrinkSelection(1));
         }
         /// <summary>
         /// Event handler for when the Entree button is clicked

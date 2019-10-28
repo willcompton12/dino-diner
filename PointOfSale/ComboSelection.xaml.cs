@@ -21,12 +21,17 @@ namespace PointOfSale
     /// </summary>
     public partial class ComboSelection : Page
     {
+        
+
+        private Entree entree;
+        private CretaceousCombo combo;
         /// <summary>
         /// Creates the combo selection page for the GUI
         /// </summary>
         public ComboSelection()
         {
             InitializeComponent();
+            
         }
         /// <summary>
         /// Event handler for when the Brontowurst button is clicked
@@ -75,8 +80,14 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void PBJ(object sender, RoutedEventArgs e)
         {
-
-            NavigationService.Navigate(new CustomizeCombo());
+            if (DataContext is Order order)
+            {
+                
+                entree = new PrehistoricPBJ();
+                order.Add(entree);
+                NavigationService.Navigate(new CustomizePrehistoricPBJ((PrehistoricPBJ)entree, 2));
+            }
+            
         }
         /// <summary>
         /// Event handler for when the pterodactyl wings button is clicked

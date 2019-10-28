@@ -22,13 +22,15 @@ namespace PointOfSale
     /// </summary>
     public partial class DrinkSelection : Page
     {
+        private int type;
         private Drink drink { get; set; }
         /// <summary>
         /// Sets up xaml file for the drink selection page
         /// </summary>
-        public DrinkSelection()
+        public DrinkSelection(int from)
         {
             InitializeComponent();
+            type = from;
         }
 
         /// <summary>
@@ -190,7 +192,14 @@ namespace PointOfSale
         /// <param name="args"></param>
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new MenuCategorySelection());
+            if (type == 1)
+            {
+                NavigationService.Navigate(new MenuCategorySelection());
+            }
+            if (type == 2)
+            {
+                NavigationService.GoBack();
+            }
         }
 
 
