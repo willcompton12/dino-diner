@@ -40,7 +40,7 @@ namespace PointOfSale
             {
                 entree = new Brontowurst();
                 order.Add(entree);
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new CustomizeBrontowurst((Brontowurst) entree, 1));
             }
 
         }
@@ -99,7 +99,6 @@ namespace PointOfSale
             {
                 entree = new PrehistoricPBJ();
                 order.Add(entree);
-                NavigationService.Navigate(new MenuCategorySelection());
                 NavigationService.Navigate(new CustomizePrehistoricPBJ(((PrehistoricPBJ)entree), 1));
             }
 

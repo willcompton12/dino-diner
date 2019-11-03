@@ -55,6 +55,9 @@
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
+    <Compile Include="CustomizeBrontowurst.xaml.cs">
+      <DependentUpon>CustomizeBrontowurst.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomizePrehistoricPBJ.xaml.cs">
       <DependentUpon>CustomizePrehistoricPBJ.xaml</DependentUpon>
     </Compile>
@@ -65,6 +68,10 @@
       <DependentUpon>SideSelection.xaml</DependentUpon>
     </Compile>
     <Page Include="ComboSelection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizeBrontowurst.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

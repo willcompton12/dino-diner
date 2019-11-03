@@ -40,8 +40,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Bronto(object sender, RoutedEventArgs e)
         {
-            
-            NavigationService.Navigate(new CustomizeCombo());
+            if (DataContext is Order order)
+            {
+
+                entree = new Brontowurst();
+                order.Add(entree);
+                NavigationService.Navigate(new CustomizeBrontowurst((Brontowurst)entree, 2));
+            }
         }
         /// <summary>
         /// Event handler for when the Nugget button is clicked
