@@ -58,6 +58,9 @@
     <Compile Include="CustomizeBrontowurst.xaml.cs">
       <DependentUpon>CustomizeBrontowurst.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomizeNuggets.xaml.cs">
+      <DependentUpon>CustomizeNuggets.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomizePrehistoricPBJ.xaml.cs">
       <DependentUpon>CustomizePrehistoricPBJ.xaml</DependentUpon>
     </Compile>
@@ -76,6 +79,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomizeCombo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizeNuggets.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

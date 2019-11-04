@@ -85,7 +85,7 @@ namespace DinoDiner.Menu
             get
             {
                 List<string> special = new List<string>();
-                if (total>6) special.Add( total + " Extra Nuggets");
+                if (total>6) special.Add( total-6 + " Extra Nuggets");
                 return special.ToArray();
             }
         }

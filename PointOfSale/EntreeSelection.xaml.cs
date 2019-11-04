@@ -55,7 +55,8 @@ namespace PointOfSale
             {
                 entree = new DinoNuggets();
                 order.Add(entree);
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new CustomizeNuggets((DinoNuggets)entree,1));
+
             }
         }
         /// <summary>

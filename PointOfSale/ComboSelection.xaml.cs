@@ -42,7 +42,6 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-
                 entree = new Brontowurst();
                 order.Add(entree);
                 NavigationService.Navigate(new CustomizeBrontowurst((Brontowurst)entree, 2));
@@ -55,8 +54,12 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Nugged(object sender, RoutedEventArgs e)
         {
-
-            NavigationService.Navigate(new CustomizeCombo());
+            if (DataContext is Order order)
+            {
+                entree = new DinoNuggets();
+                order.Add(entree);
+                NavigationService.Navigate(new CustomizeNuggets((DinoNuggets)entree, 2));
+            }
         }
         /// <summary>
         /// Event handler for when the Steakosaurus Burger button is clicked
