@@ -79,7 +79,7 @@ namespace DinoDiner.Menu
             return ("Veloci-Wrap");
         }
 
-        public string Description
+        public override string Description
         {
             get { return this.ToString(); }
 
@@ -87,7 +87,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// gets special instructions for making the sandwich
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

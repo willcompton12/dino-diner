@@ -47,12 +47,18 @@ namespace DinoDiner.Menu
             get {return side; }
             set
             {
-                this.side = value;
-                this.side.Size = this.size;
+                side = value;
+                side.Size = this.size;
                 NotifyOfPropertyChanged("Special");
-                NotifyOfPropertyChanged("Size");
+                NotifyOfPropertyChanged("Description");
+                NotifyOfPropertyChanged("Side");
                 NotifyOfPropertyChanged("Price");
                 NotifyOfPropertyChanged("Calories");
+                side.PropertyChanged += (object sender, PropertyChangedEventArgs args) =>
+                {
+                    NotifyOfPropertyChanged(args.PropertyName);
+                    NotifyOfPropertyChanged("Special");
+                };
             }
         }
 

@@ -31,6 +31,7 @@ namespace PointOfSale
         public ComboSelection()
         {
             InitializeComponent();
+
             
         }
         /// <summary>
@@ -43,8 +44,9 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 entree = new Brontowurst();
-                order.Add(entree);
-                NavigationService.Navigate(new CustomizeBrontowurst((Brontowurst)entree, 2));
+                combo = new CretaceousCombo(entree);
+                order.Add(combo);
+                NavigationService.Navigate(new CustomizeCombo(combo));
             }
         }
         /// <summary>
@@ -58,7 +60,7 @@ namespace PointOfSale
             {
                 entree = new DinoNuggets();
                 order.Add(entree);
-                NavigationService.Navigate(new CustomizeNuggets((DinoNuggets)entree, 2));
+                NavigationService.Navigate(new CustomizeCombo(combo));
             }
         }
         /// <summary>
@@ -68,8 +70,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Steako(object sender, RoutedEventArgs e)
         {
-
-            NavigationService.Navigate(new CustomizeCombo());
+            if (DataContext is Order order)
+            {
+                entree = new SteakosaurusBurger();
+                combo = new CretaceousCombo(entree);
+                order.Add(combo);
+                NavigationService.Navigate(new CustomizeSteako((SteakosaurusBurger)entree, 2));
+            }
         }
         /// <summary>
         /// Event handler for when the King burger button is clicked
@@ -78,8 +85,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void King(object sender, RoutedEventArgs e)
         {
-
-            NavigationService.Navigate(new CustomizeCombo());
+            if (DataContext is Order order)
+            {
+                entree = new TRexKingBurger();
+                combo = new CretaceousCombo(entree);
+                order.Add(combo);
+                NavigationService.Navigate(new CustomizeSteako((SteakosaurusBurger)entree, 2));
+            }
         }
         /// <summary>
         /// Event handler for when the PB&amp;J button is clicked
@@ -105,7 +117,7 @@ namespace PointOfSale
         private void Wings(object sender, RoutedEventArgs e)
         {
 
-            NavigationService.Navigate(new CustomizeCombo());
+            NavigationService.Navigate(new CustomizeCombo(new CretaceousCombo(new PterodactylWings())));
         }
         /// <summary>
         /// Event handler for when the veloci-wrap button is clicked
@@ -115,7 +127,7 @@ namespace PointOfSale
         private void Wrapped(object sender, RoutedEventArgs e)
         {
 
-            NavigationService.Navigate(new CustomizeCombo());
+            NavigationService.Navigate(new CustomizeCombo(new CretaceousCombo(new VelociWrap())));
         }
 
     }

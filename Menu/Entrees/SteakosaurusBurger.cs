@@ -96,7 +96,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Provides a description of the entree
         /// </summary>
-        public string Description
+        public override string Description
         {
             get { return this.ToString(); }
 
@@ -104,7 +104,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// gets special instructions if extra nuggets are added
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

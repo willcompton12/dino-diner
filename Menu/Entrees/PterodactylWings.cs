@@ -49,13 +49,21 @@ namespace DinoDiner.Menu
         /// <summary>
         /// returns a description of the entree
         /// </summary>
-        public string Description
+        public override string Description
         {
             get { return this.ToString(); }
 
         }
-        
-      
-      
+        /// <summary>
+        /// gets special instructions for making the sandwich
+        /// </summary>
+        public override string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
+        }
     }
 }

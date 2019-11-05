@@ -89,7 +89,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Provides a description of the Side
         /// </summary>
-        public string Description
+        public override string Description
         {
             get { return this.ToString(); }
 

@@ -72,7 +72,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// gets a description of the order item
         /// </summary>
-        public string Description
+        public override string Description
         {
             get { return this.ToString(); }
 
@@ -80,7 +80,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// gets special instructions if extra nuggets are added
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

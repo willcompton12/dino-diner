@@ -61,7 +61,7 @@ namespace PointOfSale
         /// <param name="args"></param>
         void SelectSide(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new SideSelection());
+            NavigationService.Navigate(new SideSelection(1));
         }
 
     }

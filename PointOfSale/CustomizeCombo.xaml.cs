@@ -21,14 +21,14 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCombo : Page
     {
-        
+        private CretaceousCombo combo;
         /// <summary>
         /// Creates the page to allow user to customize the combo
         /// </summary>
-        public CustomizeCombo()
+        public CustomizeCombo(CretaceousCombo input)
         {
-            
             InitializeComponent();
+            combo = input;
             
         }
         /// <summary>
@@ -47,7 +47,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SelectSide(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SideSelection());
+            NavigationService.Navigate(new SideSelection(combo , 2));
         }
 
         private void OnDone(object sender, RoutedEventArgs args)
@@ -55,6 +55,14 @@ namespace PointOfSale
         
                 NavigationService.Navigate(new MenuCategorySelection());
             
+        }
+
+        private void OnEdit(object sender, RoutedEventArgs args)
+        {
+            if(combo.Entree.ToString() == "Brontowurst")
+            {
+                NavigationService.Navigate(new CustomizeBrontowurst((Brontowurst)combo.Entree, 2));
+            }
         }
     }
 }

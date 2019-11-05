@@ -45,7 +45,7 @@ namespace PointOfSale
         {
            if( OrderControl.SelectedItem is Side side)
             {
-                NavigationService.Navigate(new SideSelection());
+                NavigationService.Navigate(new SideSelection(1));
             }
         }
 

@@ -61,11 +61,11 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Desription of the Drink
         /// </summary>
-        public string Description { get; }
+        public abstract string Description { get; }
         /// <summary>
         /// special instructions for the item
         /// </summary>
-        public virtual string[] Special { get; }
+        public abstract string[] Special { get; }
 
     }
 }

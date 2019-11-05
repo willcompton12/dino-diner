@@ -22,30 +22,57 @@ namespace PointOfSale
     /// </summary>
     public partial class SideSelection : Page
     {
-
+        private int from;
+        public CretaceousCombo combo;
         private Side side { get; set; }
         /// <summary>
         /// Creates page to allow the user to select the side
         /// </summary>
-        public SideSelection()
+        public SideSelection(int type)
         {
             InitializeComponent();
+            from = type;
+        }
+        /// <summary>
+        /// Allows to edit side for a combo
+        /// </summary>
+        /// <param name="input"></param>
+        public SideSelection(CretaceousCombo input, int type)
+        {
+            InitializeComponent();
+            combo = input;
+            from = type;
         }
 
         private void FriesClicked(object sender, RoutedEventArgs args)
         {
             if(DataContext is Order order)
             {
-                side = new Fryceritops();
-                order.Add(side);
+                if (from == 1)
+                {
+                    side = new Fryceritops();
+                    order.Add(side);
+                }
+                if(from == 2)
+                {
+                    side = new Fryceritops();
+                    combo.Side = new Fryceritops();
+                }
             }
         }
         private void MacClicked(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
             {
-                side = new MeteorMacAndCheese();
-                order.Add(side);
+                if (from == 1)
+                {
+                    side = new MeteorMacAndCheese();
+                    order.Add(side);
+                }
+                if (from == 2)
+                {
+                    combo.Side = new MeteorMacAndCheese();
+                }
             }
         }
 
@@ -72,7 +99,14 @@ namespace PointOfSale
         {
             if(sender is FrameworkElement element)
             {
-               side.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString()) ;
+                if (from == 1)
+                {
+                    side.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString());
+                }
+                if(from == 2)
+                {
+                    combo.Side.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString());
+                }
             }
         }
 

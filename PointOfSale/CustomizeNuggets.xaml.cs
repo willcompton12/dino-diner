@@ -44,7 +44,7 @@ namespace PointOfSale
             }
             if (type == 2)
             {
-                NavigationService.Navigate(new CustomizeCombo());
+                NavigationService.Navigate(new CustomizeCombo(new CretaceousCombo(entree)));
             }
         }
     }

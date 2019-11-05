@@ -17,7 +17,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// gets special instructions 
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {
@@ -158,11 +158,12 @@ namespace DinoDiner.Menu
         /// <summary>
         /// Provides a description of the entree
         /// </summary>
-        public string Description
+        public override string Description
         {
             get { return this.ToString(); }
 
         }
-       
+  
+
     }
 }
