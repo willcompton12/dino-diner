@@ -77,6 +77,11 @@ namespace DinoDiner.Menu
                 NotifyOfPropertyChanged("Special");
                 NotifyOfPropertyChanged("Price");
                 NotifyOfPropertyChanged("Calories");
+                drink.PropertyChanged += (object sender, PropertyChangedEventArgs args) =>
+                {
+                    NotifyOfPropertyChanged(args.PropertyName);
+                    NotifyOfPropertyChanged("Special");
+                };
 
             }
         }
@@ -121,6 +126,7 @@ namespace DinoDiner.Menu
                 NotifyOfPropertyChanged("Description");
                 NotifyOfPropertyChanged("Price");
                 NotifyOfPropertyChanged("Special");
+                NotifyOfPropertyChanged("Size");
             }
         }
         /// <summary>

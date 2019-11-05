@@ -59,7 +59,8 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 entree = new DinoNuggets();
-                order.Add(entree);
+                combo = new CretaceousCombo(entree);
+                order.Add(combo);
                 NavigationService.Navigate(new CustomizeCombo(combo));
             }
         }
@@ -75,7 +76,7 @@ namespace PointOfSale
                 entree = new SteakosaurusBurger();
                 combo = new CretaceousCombo(entree);
                 order.Add(combo);
-                NavigationService.Navigate(new CustomizeSteako((SteakosaurusBurger)entree, 2));
+                NavigationService.Navigate(new CustomizeCombo(combo));
             }
         }
         /// <summary>
@@ -104,8 +105,9 @@ namespace PointOfSale
             {
                 
                 entree = new PrehistoricPBJ();
-                order.Add(entree);
-                NavigationService.Navigate(new CustomizePrehistoricPBJ((PrehistoricPBJ)entree, 2));
+                combo = new CretaceousCombo(entree);
+                order.Add(combo);
+                NavigationService.Navigate(new CustomizeCombo(combo));
             }
             
         }
@@ -116,8 +118,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Wings(object sender, RoutedEventArgs e)
         {
-
-            NavigationService.Navigate(new CustomizeCombo(new CretaceousCombo(new PterodactylWings())));
+            if (DataContext is Order order)
+            {
+                entree = new PterodactylWings();
+                combo = new CretaceousCombo(entree);
+                order.Add(combo);
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
         }
         /// <summary>
         /// Event handler for when the veloci-wrap button is clicked

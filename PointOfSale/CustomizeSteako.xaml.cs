@@ -61,7 +61,7 @@ namespace PointOfSale
             }
             if (from == 2)
             {
-                NavigationService.Navigate(new CustomizeCombo(new CretaceousCombo(burger)));
+                NavigationService.GoBack();
             }
         }
     }

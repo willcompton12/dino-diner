@@ -80,8 +80,15 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                side = new MezzorellaSticks();
-                order.Add(side);
+                if (from == 1)
+                {
+                    side = new MezzorellaSticks();
+                    order.Add(side);
+                }
+                if (from == 2)
+                {
+                    combo.Side = new MezzorellaSticks();
+                }
             }
         }
 
@@ -89,8 +96,15 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                side = new Triceritots();
-                order.Add(side);
+                if (from == 1)
+                {
+                    side = new Triceritots();
+                    order.Add(side);
+                }
+                if (from == 2)
+                {
+                    combo.Side = new Triceritots();
+                }
             }
         }
 

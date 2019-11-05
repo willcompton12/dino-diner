@@ -28,7 +28,7 @@
                     <RowDefinition></RowDefinition>
                     <RowDefinition></RowDefinition>
                 </Grid.RowDefinitions>
-                <Button x:Name="chxFlavor" FontSize="14" Grid.Row="0" Content="Flavor" IsEnabled="False" Click="FlavorClick"/>
+                <Button x:Name="chxFlavor" FontSize="14" Grid.Row="0" Content="Flavor"  Click="FlavorClick"/>
                 <Button x:Name="chxSpecialty" FontSize="13" Grid.Row="1" IsEnabled="False" Click="OnSpecial">
                 <StackPanel>
                     <TextBlock FontSize="14" Text="Sweet/" HorizontalAlignment="Center"/>

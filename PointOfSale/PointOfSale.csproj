@@ -58,6 +58,9 @@
     <Compile Include="CustomizeBrontowurst.xaml.cs">
       <DependentUpon>CustomizeBrontowurst.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomizeKing.xaml.cs">
+      <DependentUpon>CustomizeKing.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomizeNuggets.xaml.cs">
       <DependentUpon>CustomizeNuggets.xaml</DependentUpon>
     </Compile>
@@ -82,6 +85,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="CustomizeCombo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomizeKing.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

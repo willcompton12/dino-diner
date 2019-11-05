@@ -29,7 +29,11 @@ namespace PointOfSale
         {
             InitializeComponent();
             combo = input;
-            
+            if (combo.Entree.ToString() == "Pterodactyl Wings")
+            {
+                uxEdit.IsEnabled = false;
+            }
+
         }
         /// <summary>
         /// Event handler for when the Drink button is clicked
@@ -38,7 +42,7 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void SelectDrink(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new DrinkSelection(2));
+            NavigationService.Navigate(new DrinkSelection(combo, 2));
         }
         /// <summary>
         /// Event handler for when the side button is clicked
@@ -63,6 +67,19 @@ namespace PointOfSale
             {
                 NavigationService.Navigate(new CustomizeBrontowurst((Brontowurst)combo.Entree, 2));
             }
+            if (combo.Entree.ToString() == "Dino-Nuggets")
+            {
+                NavigationService.Navigate(new CustomizeNuggets((DinoNuggets)combo.Entree, 2));
+            }
+            if (combo.Entree.ToString() == "Prehistoric PB&J")
+            {
+                NavigationService.Navigate(new CustomizePrehistoricPBJ((PrehistoricPBJ)combo.Entree, 2));
+            }
+            if (combo.Entree.ToString() == "Steakosaurus Burger")
+            {
+                NavigationService.Navigate(new CustomizeSteako((SteakosaurusBurger)combo.Entree, 2));
+            }
+
         }
     }
 }

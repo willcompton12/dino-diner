@@ -22,6 +22,7 @@ namespace PointOfSale
     /// </summary>
     public partial class DrinkSelection : Page
     {
+        public CretaceousCombo combo;
         private int type;
         private Drink drink { get; set; }
         /// <summary>
@@ -33,6 +34,13 @@ namespace PointOfSale
             type = from;
         }
 
+        public DrinkSelection(CretaceousCombo input, int from)
+        {
+            InitializeComponent();
+            type = from;
+            combo = input;
+        }
+
         /// <summary>
         /// Event handler for when the Soda button is clicked
         /// </summary>
@@ -42,8 +50,16 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                drink = new Sodasaurus();
-                order.Add(drink);
+                if (type == 1)
+                {
+                    drink = new Sodasaurus();
+                    order.Add(drink);
+                }
+                if (type == 2)
+                {
+
+                    combo.Drink = new Sodasaurus();
+                }
             }
             chxHoldIce.Content = "Hold Ice";
             chxFlavor.IsEnabled = false;
@@ -64,8 +80,16 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                drink = new Tyrannotea();
-                order.Add(drink);
+                if (type == 1)
+                {
+                    drink = new Tyrannotea();
+                    order.Add(drink);
+                }
+                if (type == 2)
+                {
+                    
+                    combo.Drink = new Tyrannotea();
+                }
             }
             chxHoldIce.Content = "Hold Ice";
             chxFlavor.IsEnabled = false;
@@ -84,8 +108,16 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                drink = new JurrasicJava();
-                order.Add(drink);
+                if (type == 1)
+                {
+                    drink = new JurrasicJava();
+                    order.Add(drink);
+                }
+                if (type == 2)
+                {
+
+                    combo.Drink = new JurrasicJava();
+                }
             }
             chxFlavor.IsEnabled = false;
             chxSpecialty.IsEnabled = false;
@@ -106,8 +138,16 @@ namespace PointOfSale
         {
             if (DataContext is Order order)
             {
-                drink = new Water();
-                order.Add(drink);
+                if (type == 1)
+                {
+                    drink = new Water();
+                    order.Add(drink);
+                }
+                if (type == 2)
+                {
+
+                    combo.Drink = new Water();
+                }
             }
             chxHoldIce.Content = "Hold Ice";
             chxFlavor.IsEnabled = false;
@@ -124,7 +164,15 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void FlavorClick(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new FlavorSelection((Sodasaurus)drink));
+            if (type == 1)
+            {
+                NavigationService.Navigate(new FlavorSelection((Sodasaurus)drink));
+            }
+            if(type == 2)
+            {
+                NavigationService.Navigate(new FlavorSelection((Sodasaurus)combo.Drink));
+
+            }
         }
         /// <summary>
         /// Event handler for when the size is changed
@@ -135,7 +183,14 @@ namespace PointOfSale
         {
             if (sender is FrameworkElement element)
             {
-                drink.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString());
+                if (type == 1)
+                {
+                    drink.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString());
+                }
+                if(type == 2)
+                {
+                   combo.Drink.Size = (DDSize)Enum.Parse(typeof(DinoDiner.Menu.Size), element.Tag.ToString());
+                }
             }
         }
      /// <summary>

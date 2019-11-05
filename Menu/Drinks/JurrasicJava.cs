@@ -69,6 +69,7 @@ namespace DinoDiner.Menu
                     NotifyOfPropertyChanged("Price");
                     NotifyOfPropertyChanged("Calories");
                     NotifyOfPropertyChanged("Description");
+                    NotifyOfPropertyChanged("Size");
 
                 }
                 if (size == Size.Medium)
@@ -78,6 +79,7 @@ namespace DinoDiner.Menu
                     NotifyOfPropertyChanged("Price");
                     NotifyOfPropertyChanged("Calories");
                     NotifyOfPropertyChanged("Description");
+                    NotifyOfPropertyChanged("Size");
                 }
                 if (size == Size.Large)
                 {
@@ -86,6 +88,7 @@ namespace DinoDiner.Menu
                     NotifyOfPropertyChanged("Price");
                     NotifyOfPropertyChanged("Calories");
                     NotifyOfPropertyChanged("Description");
+                    NotifyOfPropertyChanged("Size");
                 }
 
 

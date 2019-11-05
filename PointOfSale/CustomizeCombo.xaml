@@ -12,7 +12,7 @@
         <StackPanel>
             <TextBlock FontSize="28" Text="Add to Order" VerticalAlignment="Top" HorizontalAlignment="Center"/>
             <TextBlock FontSize="20" Text="Customize Combo" VerticalAlignment="Top" HorizontalAlignment="Center"/>
-            <TextBlock FontSize="14" Text="Size" HorizontalAlignment="center" Margin="180"/>
+            <TextBlock FontSize="14" Text="Size" HorizontalAlignment="center" Margin="233,180,329,180" RenderTransformOrigin="-1.841,0.422" Width="29"/>
         </StackPanel>
         <Grid Margin="25,110,141,171" RenderTransformOrigin="0.546,0.492">
             <Grid Margin="0,-28,-1,113" Grid.ColumnSpan="2" RenderTransformOrigin="0.501,1.742">
@@ -27,7 +27,7 @@
                 <TextBlock FontSize="14" Grid.Row="0" Grid.Column="0" Text="Side" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                 <TextBlock FontSize="14" Grid.Row="0" Grid.Column="1" Text="Drink" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </Grid>
-            <Grid RenderTransformOrigin="0.605,1.633" Margin="65,166,-56,-150" Grid.ColumnSpan="2">
+            <Grid RenderTransformOrigin="0.605,1.633" Margin="28,166,1,-150" Grid.ColumnSpan="3">
                 <Grid.Resources>
                     <Style TargetType="Button">
                         <Setter Property="Width" Value="70"></Setter>
@@ -50,7 +50,7 @@
             </Grid>
             <Button x:Name="uxSide" Content="Friceritops" Click="SelectSide"/>
             <Button Content="Sodasaurus" Grid.Column="1" Click="SelectDrink" />
-            <Button Content="Edit Entree" Grid.Column="2" Click="OnEdit"/>
+            <Button x:Name="uxEdit" Content="Edit Entree" Grid.Column="2" Click="OnEdit"/>
             <Grid.Resources>
                 <Style TargetType="Button">
                     <Setter Property="Width" Value="140"></Setter>
