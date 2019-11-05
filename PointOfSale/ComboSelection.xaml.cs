@@ -91,7 +91,7 @@ namespace PointOfSale
                 entree = new TRexKingBurger();
                 combo = new CretaceousCombo(entree);
                 order.Add(combo);
-                NavigationService.Navigate(new CustomizeSteako((SteakosaurusBurger)entree, 2));
+                NavigationService.Navigate(new CustomizeCombo(combo));
             }
         }
         /// <summary>
@@ -133,8 +133,13 @@ namespace PointOfSale
         /// <param name="e"></param>
         private void Wrapped(object sender, RoutedEventArgs e)
         {
-
-            NavigationService.Navigate(new CustomizeCombo(new CretaceousCombo(new VelociWrap())));
+            if (DataContext is Order order)
+            {
+                entree = new VelociWrap();
+                combo = new CretaceousCombo(entree);
+                order.Add(combo);
+                NavigationService.Navigate(new CustomizeCombo(combo));
+            }
         }
 
     }

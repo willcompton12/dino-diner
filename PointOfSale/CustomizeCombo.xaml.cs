@@ -79,7 +79,31 @@ namespace PointOfSale
             {
                 NavigationService.Navigate(new CustomizeSteako((SteakosaurusBurger)combo.Entree, 2));
             }
+            if (combo.Entree.ToString() == "T-Rex King Burger")
+            {
+                NavigationService.Navigate(new CustomizeKing((TRexKingBurger)combo.Entree, 2));
+            }
+            if (combo.Entree.ToString() == "Veloci-Wrap")
+            {
+                NavigationService.Navigate(new CustomizeWrap((VelociWrap)combo.Entree, 2));
+            }
 
+        }
+
+        private void OnSmall(object sender, RoutedEventArgs args)
+        {
+            combo.Drink.Size = DinoDiner.Menu.Size.Small;
+            combo.Side.Size = DinoDiner.Menu.Size.Small;
+        }
+        private void OnMedium(object sender, RoutedEventArgs args)
+        {
+            combo.Drink.Size = DinoDiner.Menu.Size.Medium;
+            combo.Side.Size = DinoDiner.Menu.Size.Medium;
+        }
+        private void OnLarge(object sender, RoutedEventArgs args)
+        {
+            combo.Drink.Size = DinoDiner.Menu.Size.Large;
+            combo.Side.Size = DinoDiner.Menu.Size.Large;
         }
     }
 }

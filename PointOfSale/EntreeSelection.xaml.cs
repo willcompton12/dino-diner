@@ -70,7 +70,7 @@ namespace PointOfSale
             {
                 entree = new SteakosaurusBurger();
                 order.Add(entree);
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new CustomizeSteako((SteakosaurusBurger)entree,1));
             }
 
         }
@@ -85,7 +85,7 @@ namespace PointOfSale
             {
                 entree = new TRexKingBurger();
                 order.Add(entree);
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new CustomizeKing((TRexKingBurger)entree,1));
             }
 
         }
@@ -130,7 +130,7 @@ namespace PointOfSale
             {
                 entree = new VelociWrap();
                 order.Add(entree);
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new CustomizeWrap((VelociWrap)entree,1));
             }
 
         }

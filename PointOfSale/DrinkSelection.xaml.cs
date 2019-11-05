@@ -200,14 +200,29 @@ namespace PointOfSale
      /// <param name="args"></param>
         private void OnLemon(object sender, RoutedEventArgs args)
         {
-            if(drink is Water water)
+            if (type == 1)
             {
-                water.AddLemon();
+                if (drink is Water water)
+                {
+                    water.AddLemon();
+                }
+                if (drink is Tyrannotea tea)
+                {
+
+                    tea.AddLemon();
+                }
             }
-            if(drink is Tyrannotea tea)
+            if (type == 2)
             {
-              
-                tea.AddLemon();
+                if (combo.Drink is Water water)
+                {
+                    water.AddLemon();
+                }
+                if (combo.Drink is Tyrannotea tea)
+                {
+
+                    tea.AddLemon();
+                }
             }
         }
         /// <summary>
@@ -217,10 +232,22 @@ namespace PointOfSale
         /// <param name="args"></param>
         private void OnHoldIce(object sender, RoutedEventArgs args)
         {
-            drink.HoldIce();
-            if(drink is JurrasicJava java)
+            if (type == 1)
+            {
+                drink.HoldIce();
+                if (drink is JurrasicJava java)
                 {
-                java.AddIce();
+                    java.AddIce();
+                }
+            }
+            if (type == 2)
+            {
+                combo.Drink.HoldIce();
+                if (combo.Drink is JurrasicJava java)
+                {
+                    java.AddIce();
+                }
+
             }
         }
         /// <summary>
@@ -230,14 +257,29 @@ namespace PointOfSale
         /// <param name="args"></param>
         private void OnSpecial(object sender, RoutedEventArgs args)
         {
-            if(drink is Tyrannotea tea)
+            if (type == 1)
             {
-                tea.MakeSweet();
-            }
+                if (drink is Tyrannotea tea)
+                {
+                    tea.MakeSweet();
+                }
 
-            if(drink is JurrasicJava java)
+                if (drink is JurrasicJava java)
+                {
+                    java.MakeDecaf();
+                }
+            }
+            if (type == 2)
             {
-                java.MakeDecaf();
+                if (combo.Drink is Tyrannotea tea)
+                {
+                    tea.MakeSweet();
+                }
+
+                if (combo.Drink is JurrasicJava java)
+                {
+                    java.MakeDecaf();
+                }
             }
         }
         /// <summary>

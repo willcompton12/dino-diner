@@ -9,6 +9,32 @@
       Title="CustomizeKing">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Width" Value="160"></Setter>
+                <Setter Property="Height" Value="95"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Button FontSize="13" Content="Hold Bun" Click="OnHoldBun"/>
+        <Button FontSize="13" Content="Hold Lettuce" Click="OnHoldLettuce" Grid.Column="1"/>
+        <Button FontSize="13" Content="Hold Tomato" Click="OnHoldTomato" Grid.Column="2"/>
+        <Button FontSize="13" Content="Hold Onion" Click="OnHoldOnions" Grid.Row="1"/>
+        <Button FontSize="13" Content="Hold Pickle" Click="OnHoldPickle" Grid.Row="1" Grid.Column="1"/>
+        <Button FontSize="13" Content="Hold Ketchup" Click="OnHoldKetchup" Grid.Row="1" Grid.Column="2"/>
+        <Button FontSize="13" Content="Hold Mustard" Click="OnHoldMustard" Grid.Row="2" Grid.Column="0"/>
+        <Button FontSize="13" Content="Hold Mayo" Click="OnHoldMayo" Grid.Row="2" Grid.Column="1"/>
+        <Button FontSize="13" Content="Done" Click="OnDone" Grid.Row="2" Grid.Column="2"/>
+
+
     </Grid>
 </Page>
