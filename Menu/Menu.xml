@@ -821,6 +821,11 @@
             All available Entrees on the menu
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Menu.AvailableCombos">
+            <summary>
+            All available Entrees on the menu
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Menu.AvailableSides">
             <summary>
             All available Sides on the menu

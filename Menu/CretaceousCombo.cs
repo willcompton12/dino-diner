@@ -10,7 +10,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Class to allow customers to get a combo meal at a slightly cheaper price
     /// </summary>
-    public class CretaceousCombo : INotifyPropertyChanged , IOrderItem
+    public class CretaceousCombo : INotifyPropertyChanged , IOrderItem 
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -94,6 +94,7 @@ namespace DinoDiner.Menu
             {
                 return Entree.Price + Side.Price + Drink.Price - 0.25;
             }
+            
         }
         /// <summary>
         /// Returns the total calories of the combo

@@ -56,7 +56,26 @@ namespace DinoDiner.Menu
             }
         }
 
-    
+        /// <summary>
+        /// All available Entrees on the menu
+        /// </summary>
+        public List<CretaceousCombo> AvailableCombos
+        {
+            get
+            {
+                List<CretaceousCombo> entrees = new List<CretaceousCombo>();
+                entrees.Add(new CretaceousCombo(new Brontowurst()));
+                entrees.Add(new CretaceousCombo( new DinoNuggets()));
+                entrees.Add(new CretaceousCombo( new PrehistoricPBJ()));
+                entrees.Add(new CretaceousCombo( new PterodactylWings()));
+                entrees.Add(new CretaceousCombo( new SteakosaurusBurger()));
+                entrees.Add(new CretaceousCombo( new TRexKingBurger()));
+                entrees.Add(new CretaceousCombo( new VelociWrap()));
+                return entrees;
+            }
+        }
+
+
         /// <summary>
         /// All available Sides on the menu
         /// </summary>
