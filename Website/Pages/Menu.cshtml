@@ -6,8 +6,8 @@
 }
 
 <h1>Menu</h1>
-
-<div>
+<div class="content">
+<div class="menu">
     <h2>Combos</h2>
     <div>
 
@@ -81,4 +81,56 @@
         }
 
     </div>
+</div>
+
+<form method="post">
+    <h4>Search</h4>
+    <input type="text" name="search" value="@Model.search" id="search" />
+    <input type="submit" value="Search"/>
+    <input type="submit" value="Apply Filter(s)" name="filter" id="filter"/>
+    <h4>Menu Category</h4>
+    <div class="checkbox-list">
+        <label>
+            <input name="category" type="checkbox" value="Combo" checked="@Model.category.Contains("Combo")" />
+            Combos
+        </label>
+        <label>
+            <input name="category" type="checkbox" value="Entree" checked="@Model.category.Contains("Entree")" />
+            Entrees
+        </label>
+        <label>
+            <input name="category" type="checkbox" value="Side" checked="@Model.category.Contains("Side")" />
+            Sides
+        </label>
+        <label>
+            <input name="category" type="checkbox" value="Drink" checked="@Model.category.Contains("Drink")" />
+            Drinks
+        </label>
+    </div>
+
+    <h4>Price</h4>
+    <div class="price">
+        <label>
+            <input type="number" min="0" step=".01" name="minPrice" />
+            Minimum Price
+        </label>
+        <label>
+            <input type="number" max="10" step=".01" name="maxPrice" />
+            Max Price
+        </label>
+
+    </div>
+
+    <h4>Excluding Ingredients</h4>
+    <div class="checkbox-list">
+        @foreach (string ingredient in Model.menu.Ingredients)
+        {
+        <label>
+            <input name="ingredients" type="checkbox" value="@ingredient"/>
+            @ingredient
+        </label>
+        }
+    </div>
+
+</form>
 </div>

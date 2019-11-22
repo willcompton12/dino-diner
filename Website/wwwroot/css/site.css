@@ -12,3 +12,23 @@ body {
     padding-right: 15px;
 }
 
+
+form{
+    width: 300px;
+    background-color: lightgray;
+    flex-grow: 0;
+    padding: 50px;
+}
+
+
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-between;
+}
+
+.checkbox-list{
+    display: flex;
+    flex-direction: column;
+}

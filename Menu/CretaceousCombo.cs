@@ -10,7 +10,7 @@ namespace DinoDiner.Menu
     /// <summary>
     /// Class to allow customers to get a combo meal at a slightly cheaper price
     /// </summary>
-    public class CretaceousCombo : INotifyPropertyChanged , IOrderItem 
+    public class CretaceousCombo : INotifyPropertyChanged , IOrderItem , IMenuItem
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -193,6 +193,7 @@ namespace DinoDiner.Menu
             }
         }
 
-
+        double IMenuItem.Price { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        uint IMenuItem.Calories { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

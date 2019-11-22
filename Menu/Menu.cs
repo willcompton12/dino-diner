@@ -10,6 +10,28 @@ namespace DinoDiner.Menu
     /// </summary>
     public class Menu
     {
+
+        
+       
+        public List<string> Ingredients
+        {
+            get
+            {
+                List<string> ingredients = new List<string>();
+                foreach(IMenuItem n in this.AvailableMenuItems)
+                {
+                    foreach (string ingredient in n.Ingredients)
+                    {
+                        if (!ingredients.Contains(ingredient))
+                        {
+                            ingredients.Add(ingredient);
+                        }
+                    }
+
+                }
+                return ingredients;
+            }
+        }
         /// <summary>
         /// All available items on the menu
         /// </summary>
@@ -33,6 +55,12 @@ namespace DinoDiner.Menu
                 available.Add(new MeteorMacAndCheese());
                 available.Add(new MezzorellaSticks());
                 available.Add(new Triceritots());
+                foreach(IMenuItem m in AvailableCombos)
+                {
+                    available.Add(m);
+                }
+
+
                 return available;
             }
         }
@@ -124,6 +152,50 @@ namespace DinoDiner.Menu
                 sb.Append(g + " Combo" + "\n");
             }
             return sb.ToString();
+        }
+
+        public List<IMenuItem> Search(List<IMenuItem> items, string term)
+        {
+            List<IMenuItem> result = new List<IMenuItem>();
+
+            foreach(IMenuItem item in items)
+            {
+                if (item.Description.ToLower().Contains(term.ToLower()))
+                {
+                    result.Add(item);
+                }
+            }
+
+
+
+            return result;
+        }
+
+        public List<IMenuItem> FilterByCategory(List<IMenuItem> items, List<string> categories)
+        {
+            List<IMenuItem> results = new List<IMenuItem>();
+            foreach(IMenuItem item in items)
+            {
+                if(item is Entree && categories.Contains("Entree"))
+                {
+                    results.Add(item);
+                }
+                if(item is Side && categories.Contains("Side"))
+                {
+                    results.Add(item);
+                }
+                if (item is Drink && categories.Contains("Drink"))
+                {
+                    results.Add(item);
+                }
+                if (item is CretaceousCombo && categories.Contains("Combo"))
+                {
+                    results.Add(item);
+                }
+            }
+
+
+            return results;
         }
 
 
