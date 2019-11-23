@@ -85,6 +85,8 @@ namespace DinoDiner.Menu
 
             }
         }
+
+        
         /// <summary>
         /// sets how much the combo price is.
         /// </summary>
@@ -94,6 +96,12 @@ namespace DinoDiner.Menu
             {
                 return Entree.Price + Side.Price + Drink.Price - 0.25;
             }
+
+            set
+            {
+                return;
+            }
+
             
         }
         /// <summary>
@@ -104,6 +112,10 @@ namespace DinoDiner.Menu
             get
             {
                 return Entree.Calories + Side.Calories + Drink.Calories;
+            }
+            set
+            {
+                return;
             }
         }
         private Size size = Size.Small;
@@ -193,7 +205,6 @@ namespace DinoDiner.Menu
             }
         }
 
-        double IMenuItem.Price { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        uint IMenuItem.Calories { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+     
     }
 }

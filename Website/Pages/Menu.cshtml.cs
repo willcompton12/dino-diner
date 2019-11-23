@@ -15,6 +15,16 @@ namespace Website.Pages
 
         [BindProperty]
         public List<string> category { get; set; } = new List<string>();
+
+        [BindProperty]
+        public double? minimumPrice { get; set; }
+
+        [BindProperty]
+        public double? maximumPrice { get; set; }
+
+        [BindProperty]
+        public List<string> ingredients { get; set; } = new List<string>();
+
         public List<IMenuItem> items { get; set; }
 
         public Menu menu { get; protected set; }
@@ -102,6 +112,20 @@ namespace Website.Pages
             {
                 items = menu.FilterByCategory(items, category);
             }
+
+            if(minimumPrice != null)
+            {
+                items = menu.FilterByMinPrice(items, minimumPrice);
+            }
+            if(maximumPrice != null)
+            {
+                items = menu.FilterByMaxPrice(items, maximumPrice);
+            }
+            if(ingredients.Count != 0)
+            {
+                items = menu.FilterByIngredients(items, ingredients);
+            }
+
         }
     }
 }

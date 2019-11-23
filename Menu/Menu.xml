@@ -811,6 +811,11 @@
             Class that keeps track of available items on the menu
             </summary>
         </member>
+        <member name="P:DinoDiner.Menu.Menu.PossibleIngredients">
+            <summary>
+            List of all possible ingredients
+            </summary>
+        </member>
         <member name="P:DinoDiner.Menu.Menu.AvailableMenuItems">
             <summary>
             All available items on the menu
@@ -841,6 +846,46 @@
             Overrides the ToString method and returns a string of 
             all available items seperated by a new line
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.Search(System.Collections.Generic.List{DinoDiner.Menu.IMenuItem},System.String)">
+            <summary>
+            Filters by string search
+            </summary>
+            <param name="items"></param>
+            <param name="term"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.FilterByCategory(System.Collections.Generic.List{DinoDiner.Menu.IMenuItem},System.Collections.Generic.List{System.String})">
+            <summary>
+            Filters by menu category
+            </summary>
+            <param name="items"></param>
+            <param name="categories"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.FilterByMinPrice(System.Collections.Generic.List{DinoDiner.Menu.IMenuItem},System.Nullable{System.Double})">
+            <summary>
+            Filters the list by the minimum price
+            </summary>
+            <param name="items">List of menu items to filter</param>
+            <param name="minPrice">Minimum price</param>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.FilterByMaxPrice(System.Collections.Generic.List{DinoDiner.Menu.IMenuItem},System.Nullable{System.Double})">
+            <summary>
+            Filters the list by the maximum price
+            </summary>
+            <param name="items">List of menu items to filter</param>
+            <param name="maxPrice">Maximum price</param>
+            <returns></returns>
+        </member>
+        <member name="M:DinoDiner.Menu.Menu.FilterByIngredients(System.Collections.Generic.List{DinoDiner.Menu.IMenuItem},System.Collections.Generic.List{System.String})">
+            <summary>
+            Filters the displayed items by excluding ingrdients chosen
+            </summary>
+            <param name="items"></param>
+            <param name="ingredients"></param>
             <returns></returns>
         </member>
         <member name="T:DinoDiner.Menu.Order">

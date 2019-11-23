@@ -20,7 +20,7 @@
                 <h4>Ingredients: </h4>
                 @foreach (string s in item.Ingredients)
                 {
-                    <p>@s</p>
+                    <p>* @s</p>
                 }
             </div>
         }
@@ -38,7 +38,7 @@
                 <h4>Ingredients: </h4>
                 @foreach (string s in item.Ingredients)
                 {
-                    <p>@s</p>
+                    <p>* @s</p>
                 }
             </div>
         }
@@ -56,7 +56,7 @@
                 <h4>Ingredients: </h4>
                 @foreach (string s in item.Ingredients)
                 {
-                    <p>@s</p>
+                    <p>* @s</p>
                 }
             </div>
         }
@@ -75,7 +75,7 @@
                 <h4>Ingredients: </h4>
                 @foreach (string s in item.Ingredients)
                 {
-                    <p>@s</p>
+                    <p>* @s</p>
                 }
             </div>
         }
@@ -111,22 +111,23 @@
     <h4>Price</h4>
     <div class="price">
         <label>
-            <input type="number" min="0" step=".01" name="minPrice" />
+            <input type="number" min="0" step=".01" name="minimumPrice" id="minimum-price" value="@Model.minimumPrice" />
             Minimum Price
         </label>
         <label>
-            <input type="number" max="10" step=".01" name="maxPrice" />
+            <input type="number" max="10" step=".01" name="maximumPrice" id="maximum-price" value="@Model.maximumPrice" />
             Max Price
         </label>
 
     </div>
 
     <h4>Excluding Ingredients</h4>
+    <p>(Choose ingredients to exclude)</p>
     <div class="checkbox-list">
-        @foreach (string ingredient in Model.menu.Ingredients)
+        @foreach (string ingredient in Model.menu.PossibleIngredients)
         {
         <label>
-            <input name="ingredients" type="checkbox" value="@ingredient"/>
+            <input name="ingredients" type="checkbox" value="@ingredient" checked="@Model.ingredients.Contains(@ingredient)"/>
             @ingredient
         </label>
         }
